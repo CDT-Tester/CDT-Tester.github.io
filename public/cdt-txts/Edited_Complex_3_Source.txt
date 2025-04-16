@@ -1,0 +1,125 @@
+digraph G{
+        graph [size="18,12"];
+        node [shape=box]
+    "Suspected Meningioma" -> "Repeat MRI in 3 months" [label="Headaches, visual changes, neurological symptoms, seizures (100%)"];
+
+"Repeat MRI in 3 months" -> "Mass identified (e.g., 4.2cm parasagittal/falx mass)" [label="Mass identified (e.g., 4.2cm parasagittal/falx mass) (100%)"];
+
+"Mass identified (e.g., 4.2cm parasagittal/falx mass)" -> "Evaluate size, location, symptoms, age, comorbidities, KPS score" [label="Evaluate size, location, symptoms, age, comorbidities, KPS score (100%)"];
+
+"Evaluate size, location, symptoms, age, comorbidities, KPS score" -> "Small asymptomatic recurrence or patient preference" [label="Small (<3cm), asymptomatic, stable, or significant comorbidities (14%)"];
+"Evaluate size, location, symptoms, age, comorbidities, KPS score" -> "Surgical planning" [label="Large (≥3cm), symptomatic, accessible, or patient preference (53%)"];
+"Evaluate size, location, symptoms, age, comorbidities, KPS score" -> "Consider stereotactic radiosurgery" [label="Inoperable, high surgical risk, or patient preference "];
+"Evaluate size, location, symptoms, age, comorbidities, KPS score" -> "Age >50, minimal symptoms, 4.2cm tumor" [label="Age >50, minimal symptoms, 4.2cm tumor (32%)"];
+
+"Small asymptomatic recurrence or patient preference" -> "Monitor for symptom improvement" [label="Stable size (<1mm growth) and symptoms (85%)"];
+"Small asymptomatic recurrence or patient preference" -> ">1.5mm growth/6mo, worsening symptoms, or new deficits" [label=">2mm growth/6mo, new symptoms, or worsening existing symptoms (14%)"];
+
+"Surgical planning" -> "Monitor for symptom improvement" [label="Complete resection (Simpson Grade I-III) (31%)"];
+"Surgical planning" -> "Consider stereotactic radiosurgery" [label="Incomplete resection or high grade (WHO II-III) (1%)"];
+"Surgical planning" -> "WHO Grade II-III or incomplete resection" [label="WHO Grade II-III or incomplete resection (55%)"];
+"Surgical planning" -> "MRI with volumetrics, MR venography, CT bone windows" [label="MRI with volumetrics, MR venography, CT bone windows (1%)"];
+"Surgical planning" -> "80% tumor removal, critical structures preserved" [label="80% tumor removal, critical structures preserved (9%)"];
+
+"Consider stereotactic radiosurgery" -> "Monitor for symptom improvement" [label="Completed treatment course (e.g., 54 Gy in 30 fractions) (88%)"];
+"Consider stereotactic radiosurgery" -> "Gamma Knife for small (<4cm) tumors or recurrence" [label="Gamma Knife for small (<4cm) tumors or recurrence "];
+"Consider stereotactic radiosurgery" -> "For larger tumors (>4cm) or near critical structures" [label="For larger tumors (>4cm) or near critical structures (2%)"];
+"Consider stereotactic radiosurgery" -> "14 Gy to 50% isodose line completed" [label="14 Gy to 50% isodose line completed (8%)"];
+
+"Monitor for symptom improvement" -> "Monitor for symptom improvement" [label="Stable imaging and symptoms "];
+"Monitor for symptom improvement" -> ">1.5mm growth/6mo, worsening symptoms, or new deficits" [label=">1.5mm growth/6mo, worsening symptoms, or new deficits (88%)"];
+"Monitor for symptom improvement" -> "Headaches, seizures, visual deficits, or cognitive changes" [label="Headaches, seizures, visual deficits, or cognitive changes "];
+"Monitor for symptom improvement" -> "Stable for >5 years post-treatment" [label="Stable for >5 years post-treatment (8%)"];
+"Monitor for symptom improvement" -> "Evaluate KPS score and daily living activities" [label="Evaluate KPS score and daily living activities "];
+"Monitor for symptom improvement" -> "New headaches, visual changes, or neurological symptoms" [label="New headaches, visual changes, or neurological symptoms (1%)"];
+"Monitor for symptom improvement" -> "1.5cm residual along superior sagittal sinus" [label="1.5cm residual along superior sagittal sinus (1%)"];
+"Monitor for symptom improvement" -> "Cognitive symptoms affecting job performance" [label="Cognitive symptoms affecting job performance "];
+"Monitor for symptom improvement" -> "Evaluate functional status" [label="Evaluate functional status "];
+
+">1.5mm growth/6mo, worsening symptoms, or new deficits" -> "KPS >70: Consider aggressive treatment" [label="Recurrence, grade progression, or significant symptom worsening (97%)"];
+">1.5mm growth/6mo, worsening symptoms, or new deficits" -> "Histological upgrade on re-resection" [label="Histological upgrade on re-resection (2%)"];
+">1.5mm growth/6mo, worsening symptoms, or new deficits" -> "Acute neurological deterioration, >5mm midline shift" [label="Acute neurological deterioration, >5mm midline shift "];
+">1.5mm growth/6mo, worsening symptoms, or new deficits" -> "Small recurrence (<0.5cm) with minimal symptoms" [label="Small recurrence (<0.5cm) with minimal symptoms "];
+">1.5mm growth/6mo, worsening symptoms, or new deficits" -> "≥2 recurrences within 2 years" [label="≥2 recurrences within 2 years "];
+">1.5mm growth/6mo, worsening symptoms, or new deficits" -> "Rapid growth, multiple recurrences, KPS <40" [label="Rapid growth, multiple recurrences, KPS <40 "];
+">1.5mm growth/6mo, worsening symptoms, or new deficits" -> "Significant peritumoral edema" [label="Significant peritumoral edema "];
+">1.5mm growth/6mo, worsening symptoms, or new deficits" -> "Multiple new enhancing lesions" [label="Multiple new enhancing lesions "];
+
+"KPS >70: Consider aggressive treatment" -> "Surgical planning" [label="Operable, symptomatic, or patient preference (43%)"];
+"KPS >70: Consider aggressive treatment" -> "Consider stereotactic radiosurgery" [label="Inoperable, small recurrence, or previous surgery (39%)"];
+"KPS >70: Consider aggressive treatment" -> "Small asymptomatic recurrence or patient preference" [label="Small asymptomatic recurrence or patient preference "];
+"KPS >70: Consider aggressive treatment" -> "KPS <50: Consider supportive care" [label="Multiple recurrences, poor performance status, or patient choice (3%)"];
+"KPS >70: Consider aggressive treatment" -> "Consider aggressive multimodal approach" [label="Multiple recurrences or refractory disease (14%)"];
+
+"KPS <50: Consider supportive care" -> "KPS <50: Consider supportive care" [label="Ongoing symptom management "];
+"KPS <50: Consider supportive care" -> "Implement end-of-life preferences" [label="Transition to hospice, KPS <40 (74%)"];
+"KPS <50: Consider supportive care" -> "Discuss goals of care" [label="Discuss goals of care (25%)"];
+
+"Headaches, seizures, visual deficits, or cognitive changes" -> "Monitor for symptom improvement" [label="Symptoms controlled "];
+"Headaches, seizures, visual deficits, or cognitive changes" -> "Focal or generalized seizures" [label="Focal or generalized seizures "];
+
+"Stable for >5 years post-treatment" -> "Monitor for symptom improvement" [label="Continue surveillance at extended intervals (16%)"];
+"Stable for >5 years post-treatment" -> "Yearly MRI if stable for >2 years" [label="Yearly MRI if stable for >2 years (83%)"];
+
+"Histological upgrade on re-resection" -> "KPS >70: Consider aggressive treatment" [label="Adjust treatment plan based on new grade (50%)"];
+"Histological upgrade on re-resection" -> "WHO Grade III features on pathology" [label="WHO Grade III features on pathology (50%)"];
+"Histological upgrade on re-resection" -> "Assess for TERT, NF2, CDKN2A/B mutations" [label="Assess for TERT, NF2, CDKN2A/B mutations "];
+
+"WHO Grade II-III or incomplete resection" -> "Consider stereotactic radiosurgery" [label="Standard fractionation or SRS (100%)"];
+"WHO Grade II-III or incomplete resection" -> "For WHO Grade II-III or residual tumor" [label="For WHO Grade II-III or residual tumor "];
+
+"Gamma Knife for small (<4cm) tumors or recurrence" -> "Monitor for symptom improvement" [label="Monitor for radiation effect "];
+
+"Consider aggressive multimodal approach" -> "KPS <50: Consider supportive care" [label="Poor response or declining performance status (100%)"];
+"Consider aggressive multimodal approach" -> "For recurrent, progressive disease" [label="For recurrent, progressive disease "];
+
+"Acute neurological deterioration, >5mm midline shift" -> "KPS <50: Consider supportive care" [label="Poor post-operative prognosis or family decision "];
+
+"Evaluate KPS score and daily living activities" -> "KPS >70: Consider aggressive treatment" [label="KPS decline to <70 "];
+"Evaluate KPS score and daily living activities" -> "KPS <50: Consider supportive care" [label="KPS <50 with multiple recurrences "];
+
+"MRI with volumetrics, MR venography, CT bone windows" -> "Surgical planning" [label="Surgical planning "];
+
+"Yearly MRI if stable for >2 years" -> "Monitor for symptom improvement" [label="Continue if no recurrence (100%)"];
+
+"New headaches, visual changes, or neurological symptoms" -> "Repeat MRI in 3 months" [label="Prompt re-imaging (100%)"];
+
+"Small recurrence (<0.5cm) with minimal symptoms" -> "Repeat MRI in 3 months" [label="Repeat MRI in 3 months (100%)"];
+
+"For WHO Grade II-III or residual tumor" -> "Consider stereotactic radiosurgery" [label="Determine optimal radiation plan "];
+
+"For larger tumors (>4cm) or near critical structures" -> "Monitor for symptom improvement" [label="Monitor for treatment response and side effects (100%)"];
+
+"≥2 recurrences within 2 years" -> "Consider aggressive multimodal approach" [label="Consider aggressive multimodal approach "];
+
+"WHO Grade III features on pathology" -> "KPS >70: Consider aggressive treatment" [label="Consider aggressive management (100%)"];
+
+"Age >50, minimal symptoms, 4.2cm tumor" -> "Monitor for symptom improvement" [label="Monitor every 3-6 months (100%)"];
+
+"80% tumor removal, critical structures preserved" -> "Monitor for symptom improvement" [label="Monitor residual tumor (100%)"];
+
+"1.5cm residual along superior sagittal sinus" -> "Consider stereotactic radiosurgery" [label="Consider stereotactic radiosurgery (100%)"];
+
+"14 Gy to 50% isodose line completed" -> "Monitor for symptom improvement" [label="Monitor for tumor shrinkage (100%)"];
+
+"Rapid growth, multiple recurrences, KPS <40" -> "KPS <50: Consider supportive care" [label="Focus on comfort care "];
+
+"Assess for TERT, NF2, CDKN2A/B mutations" -> "KPS >70: Consider aggressive treatment" [label="Guide treatment based on molecular profile "];
+
+"For recurrent, progressive disease" -> "Monitor for symptom improvement" [label="Monitor for response and side effects "];
+
+"Cognitive symptoms affecting job performance" -> "Monitor for symptom improvement" [label="Adjust work responsibilities or consider medical leave "];
+
+"Focal or generalized seizures" -> "Monitor for symptom improvement" [label="Adjust anti-epileptic medications "];
+
+"Significant peritumoral edema" -> "Monitor for symptom improvement" [label="Monitor for symptom improvement "];
+
+"Multiple new enhancing lesions" -> "KPS <50: Consider supportive care" [label="Consider hospice if rapid decline "];
+
+"Evaluate functional status" -> "KPS >70: Consider aggressive treatment" [label="KPS >70: Consider aggressive treatment "];
+"Evaluate functional status" -> "KPS <50: Consider supportive care" [label="KPS <50: Consider supportive care "];
+
+"Discuss goals of care" -> "Implement end-of-life preferences" [label="Implement end-of-life preferences (100%)"];
+
+
+}
