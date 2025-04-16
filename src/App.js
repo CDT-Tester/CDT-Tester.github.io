@@ -27,7 +27,7 @@ const SimpleNotesWithSVG = () => {
                 return (<>
                 {/* Left panel */}
                 <div className="w-1/2 p-4 overflow-auto bg-gray-50 border-r">
-                        <PatientNotesPanel csvPath="./syn-clinical-notes/test-patients.csv" />
+                        <PatientNotesPanel csvPath="./syn-clinical-notes/rare-patients.csv" />
                 </div>
                 {/* Right panel */}
                 <div className="w-1/2 p-4 overflow-auto bg-gray-50">
@@ -83,7 +83,7 @@ const SimpleNotesWithSVG = () => {
           }`}
           onClick={() => setActiveTab("D")}
         >
-          Rare Compare Comparison
+          Rare Case Comparison
         </button>
         <button
           className={`px-4 py-2 rounded-t-lg ml-2 ${
