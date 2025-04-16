@@ -1,0 +1,206 @@
+digraph G{
+        graph [size="18,12"];
+        node [shape=box]
+    "Suspected Meningioma" -> "Evaluate patient age" [label="Evaluate patient age"];
+
+"Evaluate patient age" -> "Age <18 years" [label="Age <18 years"];
+"Evaluate patient age" -> "Age ≥18 years" [label="Age ≥18 years"];
+
+"Age ≥18 years" -> "Multiple meningiomas or young age" [label="Positive family history"];
+"Age ≥18 years" -> "No significant family history" [label="No significant family history"];
+
+"No significant family history" -> "Multiple meningiomas or young age" [label="History of radiation exposure"];
+"No significant family history" -> "Annual brain and spine MRI" [label="No radiation history"];
+
+"Multiple meningiomas or young age" -> "Annual brain and spine MRI" [label="Proceed with imaging regardless of result"];
+"Multiple meningiomas or young age" -> "NF2 mutation detected" [label="NF2 mutation detected"];
+
+"Annual brain and spine MRI" -> "Multiple lesions detected" [label="Multiple lesions detected"];
+"Annual brain and spine MRI" -> "Tumor growth >1.5mm/3 months" [label="Single lesion detected"];
+"Annual brain and spine MRI" -> "Intraventricular mass detected" [label="Intraventricular mass detected"];
+
+"Multiple lesions detected" -> "Multiple meningiomas or young age" [label="Test for NF2 and other mutations"];
+"Multiple lesions detected" -> "Proceed to treatment planning" [label="Proceed to treatment planning"];
+
+"Tumor growth >1.5mm/3 months" -> "<3 cm" [label="<3 cm"];
+"Tumor growth >1.5mm/3 months" -> ">3 cm" [label=">3 cm"];
+
+"Symptom progression" -> "Long-term stability (>5 years)" [label="No or mild symptoms (<3 headaches/week)"];
+"Symptom progression" -> "Severe or progressive symptoms" [label="Severe or progressive symptoms"];
+"Symptom progression" -> "New neurological deficits" [label="Intractable symptoms"];
+
+"Severe or progressive symptoms" -> "Accessible location" [label="Accessible location"];
+"Severe or progressive symptoms" -> "Challenging location" [label="Challenging location"];
+
+"Proceed to treatment planning" -> "Assess pregnancy status" [label="Assess pregnancy status"];
+"Proceed to treatment planning" -> "Improved with supportive care" [label="Patient preference, KPS >70, mild symptoms"];
+"Proceed to treatment planning" -> "Assess visual symptoms" [label="Assess visual symptoms"];
+
+"Assess pregnancy status" -> "Pregnant" [label="Pregnant"];
+"Assess pregnancy status" -> "Not pregnant" [label="Not pregnant"];
+
+"Pregnant" -> "Improved with supportive care" [label="Early pregnancy, stable symptoms"];
+"Pregnant" -> "New neurological deficits" [label="Late pregnancy, severe symptoms"];
+
+"Not pregnant" -> "New neurological deficits" [label="Good performance status (KPS >70)"];
+"Not pregnant" -> "Improved with supportive care" [label="Poor performance status or patient preference"];
+"Not pregnant" -> "Tumor growth >3mm/6 months" [label="Large tumor or near critical structures"];
+
+"Tumor growth >3mm/6 months" -> "Recurrence <3cm, good KPS" [label="Size <3cm, non-critical location"];
+"Tumor growth >3mm/6 months" -> "Inadequate symptom control" [label="Size >3cm or near critical structures"];
+
+"Atypical features or subtotal resection" -> "Recurrence <3cm, good KPS" [label="Residual <3cm"];
+"Atypical features or subtotal resection" -> "Inadequate symptom control" [label="Residual >3cm"];
+"Atypical features or subtotal resection" -> "Monitor for response" [label="Completed radiation course"];
+
+"Monitor for response" -> "Disease progression on trial" [label="Growth >1.5mm/3 months or new symptoms"];
+"Monitor for response" -> "Monitor for response" [label="Stable for <5 years"];
+"Monitor for response" -> "Long-term stability (>5 years)" [label="Long-term stability (>5 years)"];
+"Monitor for response" -> "KPS >40 and patient wishes aggressive treatment" [label="Recurrent seizures or increasing headaches"];
+"Monitor for response" -> "Multiple recurrences, WHO Grade II-III" [label="Multiple recurrences after radiation"];
+"Monitor for response" -> "New lesion on follow-up imaging" [label="New lesion on follow-up imaging"];
+"Monitor for response" -> "Improved with supportive care" [label="Stable/decreased size, improved symptoms"];
+"Monitor for response" -> "Reports of cognitive changes" [label="Reports of cognitive changes"];
+"Monitor for response" -> "New onset seizures" [label="New onset seizures"];
+"Monitor for response" -> "Multiple meningiomas or young age" [label="Multiple meningiomas or young age"];
+"Monitor for response" -> "Tumor growth >3mm/6 months" [label="Growth of small, previously observed lesion"];
+"Monitor for response" -> "Decreased KPS or work capacity" [label="Decreased KPS or work capacity"];
+
+"KPS >40 and patient wishes aggressive treatment" -> "New neurological deficits" [label="If operable and good performance status"];
+"KPS >40 and patient wishes aggressive treatment" -> "Recurrence <3cm, good KPS" [label="Recurrence <3cm, good KPS"];
+"KPS >40 and patient wishes aggressive treatment" -> "Inadequate symptom control" [label="If >3cm or prior radiosurgery"];
+"KPS >40 and patient wishes aggressive treatment" -> "If prior radiation and progression" [label="If prior radiation and progression"];
+"KPS >40 and patient wishes aggressive treatment" -> "Long-term stability (>5 years)" [label="Poor performance status or multiple prior treatments"];
+"KPS >40 and patient wishes aggressive treatment" -> "Improved with supportive care" [label="Minimal residual tumor"];
+"KPS >40 and patient wishes aggressive treatment" -> "Multiple recurrences, WHO Grade II-III" [label="Multiple recurrences, WHO Grade II-III"];
+"KPS >40 and patient wishes aggressive treatment" -> "Extensive disease, KPS <50" [label="Poor performance status, multiple prior treatments"];
+
+"Long-term stability (>5 years)" -> "Symptom progression" [label="Symptom progression"];
+"Long-term stability (>5 years)" -> "Tumor growth >1.5mm/3 months" [label="Tumor growth >1.5mm/3 months"];
+
+"Disease progression on trial" -> "Extensive disease, KPS <50" [label="Extensive disease, KPS <50"];
+"Disease progression on trial" -> "Multiple recurrences, WHO Grade II-III" [label="Rapid growth or multiple recurrences"];
+"Disease progression on trial" -> "Signs of increased ICP" [label="Signs of increased ICP"];
+"Disease progression on trial" -> "Rapid growth or new aggressive features" [label="Rapid growth or new aggressive features"];
+"Disease progression on trial" -> "New neurological deficits" [label="New neurological deficits"];
+"Disease progression on trial" -> "Decreased KPS or work capacity" [label="Decreased KPS score"];
+"Disease progression on trial" -> "Suspicion of malignant transformation" [label="Suspicion of malignant transformation"];
+"Disease progression on trial" -> "Hydrocephalus development" [label="Hydrocephalus development"];
+"Disease progression on trial" -> "Rapid neurological decline, KPS <30" [label="Rapid neurological decline, KPS <30"];
+"Disease progression on trial" -> "Increased edema, worsening symptoms" [label="Significant peritumoral edema"];
+"Disease progression on trial" -> "Multiple enhancing nodules, CSF dissemination" [label="Multiple enhancing nodules, CSF dissemination"];
+"Disease progression on trial" -> "Evaluate functional status" [label="Evaluate functional status"];
+"Disease progression on trial" -> "KPS >40 and patient wishes aggressive treatment" [label=""];
+
+"Extensive disease, KPS <50" -> "KPS >40 and patient wishes aggressive treatment" [label="Temporary improvement in symptoms"];
+"Extensive disease, KPS <50" -> "Extensive disease, KPS <50" [label="End-stage disease"];
+"Extensive disease, KPS <50" -> "Rapid neurological decline, KPS <30" [label="End-stage disease, KPS <30"];
+"Extensive disease, KPS <50" -> "Increased edema, worsening symptoms" [label="For symptom management"];
+
+"New neurological deficits" -> "Multiple meningiomas or young age" [label="Multiple meningiomas or age <40"];
+"New neurological deficits" -> "New onset seizures" [label="Post-operative seizures"];
+"New neurological deficits" -> "Posterior fossa tumor" [label="Posterior fossa tumor"];
+"New neurological deficits" -> "Pathology Grade" [label=""];
+
+"NF2 mutation detected" -> "Annual brain and spine MRI" [label="Annual brain and spine MRI"];
+
+"WHO Grade III" -> "Multiple recurrences, WHO Grade II-III" [label="Consider concurrent with radiotherapy"];
+"WHO Grade III" -> "Consider enrollment if eligible" [label="Consider enrollment if eligible"];
+"WHO Grade III" -> "Extent of Resection" [label=""];
+
+"Improved with supportive care" -> "Monitor for response" [label="Stable symptoms and size"];
+"Improved with supportive care" -> "Disease progression on trial" [label="Symptom worsening or growth >1.5mm/3 months"];
+"Improved with supportive care" -> "New neurological deficits" [label="Tumor growth >4mm in 3 months"];
+"Improved with supportive care" -> "Tumor growth >3mm/6 months" [label="Tumor growth >3mm/6 months"];
+"Improved with supportive care" -> "Increased edema, worsening symptoms" [label="Increased edema, worsening symptoms"];
+"Improved with supportive care" -> "Inadequate symptom control" [label="Growth >1.5mm/3 months, KPS >70"];
+"Improved with supportive care" -> "New onset seizures" [label="New onset seizures"];
+
+"Inadequate symptom control" -> "Multiple recurrences, WHO Grade II-III" [label="Inadequate response or progression"];
+"Inadequate symptom control" -> "Increased edema, worsening symptoms" [label="Acute radiation effects"];
+"Inadequate symptom control" -> "Monitor for response" [label="Completed treatment course"];
+
+"Challenging location" -> "Suspicion of malignant transformation" [label="Uncertain diagnosis or rapid growth"];
+"Challenging location" -> "Proceed to treatment planning" [label=""];
+
+"Signs of increased ICP" -> "Hydrocephalus development" [label="Symptomatic hydrocephalus"];
+
+"Rapid growth or new aggressive features" -> "Extensive disease, KPS <50" [label="Poor prognosis or patient preference"];
+"Rapid growth or new aggressive features" -> "Suspicion of malignant transformation" [label=""];
+
+"New lesion on follow-up imaging" -> "Recurrence <3cm, good KPS" [label="Small recurrence (<3cm) after prior radiation"];
+"New lesion on follow-up imaging" -> "New neurological deficits" [label="Large recurrence (>3cm) or symptomatic"];
+"New lesion on follow-up imaging" -> "Improved with supportive care" [label="Asymptomatic and <1cm"];
+"New lesion on follow-up imaging" -> "KPS >40 and patient wishes aggressive treatment" [label=""];
+
+"WHO Grade II" -> "Check for TERT promoter mutation" [label="Check for TERT promoter mutation"];
+"WHO Grade II" -> "Atypical features or subtotal resection" [label="Atypical features or subtotal resection"];
+"WHO Grade II" -> "Multiple recurrences, WHO Grade II-III" [label="Recurrent or progressive despite local therapies"];
+"WHO Grade II" -> "Extent of Resection" [label=""];
+
+"Check for TERT promoter mutation" -> "Inadequate symptom control" [label="TERT mutation present"];
+"Check for TERT promoter mutation" -> "Multiple recurrences, WHO Grade II-III" [label="NF2 and TERT mutations detected"];
+
+"Recurrence <3cm, good KPS" -> "Monitor for response" [label="Post-SRS monitoring"];
+
+"If prior radiation and progression" -> "Monitor for response" [label="After careful consideration of risks"];
+
+"New onset seizures" -> "Monitor for response" [label="Controlled with medication"];
+"New onset seizures" -> "KPS >40 and patient wishes aggressive treatment" [label="Refractory seizures"];
+"New onset seizures" -> "Improved with supportive care" [label="Controlled with medication"];
+
+"Reports of cognitive changes" -> "KPS >40 and patient wishes aggressive treatment" [label="Significant cognitive decline"];
+"Reports of cognitive changes" -> "Monitor for response" [label="Stable cognition"];
+"Reports of cognitive changes" -> "Improved with supportive care" [label="Stable or improved cognition"];
+
+"Decreased KPS or work capacity" -> "Extensive disease, KPS <50" [label="KPS <40 or patient preference"];
+"Decreased KPS or work capacity" -> "KPS >40 and patient wishes aggressive treatment" [label="KPS >40 and patient wishes aggressive treatment"];
+"Decreased KPS or work capacity" -> "Increased edema, worsening symptoms" [label="Edema-related symptoms"];
+"Decreased KPS or work capacity" -> "Improved with supportive care" [label="Improved with supportive care"];
+
+"Incomplete (Simpson IV-V)" -> "Improved with supportive care" [label="Minimal residual, asymptomatic"];
+"Incomplete (Simpson IV-V)" -> "Atypical features or subtotal resection" [label=""];
+
+"Multiple recurrences, WHO Grade II-III" -> "Monitor for response" [label="Monitor for response and side effects"];
+"Multiple recurrences, WHO Grade II-III" -> "Disease progression on trial" [label="No response after 3 months"];
+
+"Posterior fossa tumor" -> "Postoperative edema" [label="Postoperative edema"];
+
+"Postoperative edema" -> "Extensive disease, KPS <50" [label="Progressive neurological decline"];
+
+"Increased edema, worsening symptoms" -> "Monitor for response" [label="Symptom improvement"];
+"Increased edema, worsening symptoms" -> "Disease progression on trial" [label="No improvement or side effects"];
+"Increased edema, worsening symptoms" -> "Reports of cognitive changes" [label="Monitor for steroid-induced changes"];
+"Increased edema, worsening symptoms" -> "Inadequate symptom control" [label="Inadequate symptom control"];
+
+"Multiple enhancing nodules, CSF dissemination" -> "Palliative treatment attempt" [label="Palliative treatment attempt"];
+
+"Palliative treatment attempt" -> "Monitor for response" [label="Monitor for response"];
+"Palliative treatment attempt" -> "Disease progression on trial" [label="No response or disease progression"];
+
+"Consider enrollment if eligible" -> "Monitor for response" [label="Monitor for response"];
+"Consider enrollment if eligible" -> "Disease progression on trial" [label="Disease progression on trial"];
+
+"<3 cm" -> "Symptom progression" [label=""];
+
+">3 cm" -> "Severe or progressive symptoms" [label=""];
+
+"Accessible location" -> "Proceed to treatment planning" [label=""];
+
+"Pathology Grade" -> "WHO Grade I" [label=""];
+"Pathology Grade" -> "WHO Grade II" [label=""];
+"Pathology Grade" -> "WHO Grade III" [label=""];
+
+"WHO Grade I" -> "Extent of Resection" [label=""];
+
+"Extent of Resection" -> "Complete (Simpson I-III)" [label=""];
+"Extent of Resection" -> "Incomplete (Simpson IV-V)" [label=""];
+
+"Complete (Simpson I-III)" -> "Monitor for response" [label=""];
+
+"Suspicion of malignant transformation" -> "Pathology Grade" [label=""];
+
+"Hydrocephalus development" -> "Monitor for response" [label=""];
+
+
+}

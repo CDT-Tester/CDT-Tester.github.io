@@ -1,0 +1,76 @@
+digraph G{
+        graph [size="18,12"];
+        node [shape=box]
+    "Suspected Meningioma" -> "Progressive headaches, weakness, visual symptoms" [label="Progressive headaches, weakness, visual symptoms (100%)"];
+
+"Progressive headaches, weakness, visual symptoms" -> "Dural-based mass identified" [label="Dural-based mass identified (100%)"];
+
+"Dural-based mass identified" -> "KPS>60, consider further treatment" [label="Evaluate tumor size, location, symptoms, KPS (100%)"];
+
+"KPS>60, consider further treatment" -> "Stable, improved symptoms" [label="Asymptomatic, <3cm, stable, KPS>70 (4%)"];
+"KPS>60, consider further treatment" -> "Symptomatic, ≥3cm, accessible, KPS>60" [label="Symptomatic, ≥3cm, accessible, KPS>60 (76%)"];
+"KPS>60, consider further treatment" -> "Grade II/III or residual tumor" [label="Inoperable, deep location, KPS>60 (9%)"];
+"KPS>60, consider further treatment" -> "Small volume recurrence (<2cm), prior radiation" [label="1-3cm, mild symptoms, patient preference (8%)"];
+
+"Stable, improved symptoms" -> "Monitor response, continue if beneficial" [label="3-6 month imaging (100%)"];
+"Stable, improved symptoms" -> "KPS>60, consider further treatment" [label="Growth >1.5mm/year or new symptoms "];
+
+"Symptomatic, ≥3cm, accessible, KPS>60" -> "Monitor response, continue if beneficial" [label="Complete resection (Simpson I-III) (31%)"];
+"Symptomatic, ≥3cm, accessible, KPS>60" -> "Guide treatment intensity" [label="Incomplete resection or high grade (19%)"];
+"Symptomatic, ≥3cm, accessible, KPS>60" -> "Assess WHO grade, proliferation index, molecular markers" [label="Assess WHO grade, proliferation index, molecular markers (49%)"];
+
+"Grade II/III or residual tumor" -> "Monitor response, continue if beneficial" [label="Monitor response, 3-month MRI (100%)"];
+
+"Small volume recurrence (<2cm), prior radiation" -> "Monitor response, continue if beneficial" [label="3-6 month post-treatment imaging (100%)"];
+
+"Guide treatment intensity" -> "Grade II/III or residual tumor" [label="Grade II/III or residual tumor (24%)"];
+"Guide treatment intensity" -> "Monitor response, continue if beneficial" [label="Complete adjuvant therapy (75%)"];
+"Guide treatment intensity" -> "WHO Grade II, post-operative" [label="WHO Grade II, post-operative "];
+
+"Monitor response, continue if beneficial" -> "Growth >1.5mm/year, new enhancement, or symptom progression" [label="Growth >1.5mm/year, new enhancement, or symptom progression (81%)"];
+"Monitor response, continue if beneficial" -> "Stable, improved symptoms" [label="Stable, improved symptoms (9%)"];
+"Monitor response, continue if beneficial" -> "Poor outcome, consider end-of-life care" [label="Multiple recurrences, KPS<50 (8%)"];
+"Monitor response, continue if beneficial" -> "New enhancing nodule <2cm within 3 years" [label="New enhancing nodule <2cm within 3 years "];
+"Monitor response, continue if beneficial" -> "New enhancement, edema post-radiation" [label="New enhancement, edema post-radiation "];
+"Monitor response, continue if beneficial" -> "Evaluate functional status" [label="Evaluate functional status "];
+"Monitor response, continue if beneficial" -> "Rapid neurological decline, significant mass effect" [label="Rapid neurological decline, significant mass effect "];
+
+"Growth >1.5mm/year, new enhancement, or symptom progression" -> "KPS>60, consider further treatment" [label="Good functional status (KPS>60) (36%)"];
+"Growth >1.5mm/year, new enhancement, or symptom progression" -> "Small volume recurrence (<2cm), prior radiation" [label="Small volume recurrence (<2cm), prior radiation (17%)"];
+"Growth >1.5mm/year, new enhancement, or symptom progression" -> "Consider bevacizumab treatment" [label="Multiple recurrences, not amenable to local therapy (9%)"];
+"Growth >1.5mm/year, new enhancement, or symptom progression" -> "Poor outcome, consider end-of-life care" [label="Poor prognosis, patient preference, KPS<40 (18%)"];
+"Growth >1.5mm/year, new enhancement, or symptom progression" -> "Symptomatic recurrence, operable" [label="Symptomatic recurrence, operable (16%)"];
+
+"Consider bevacizumab treatment" -> "Monitor response, continue if beneficial" [label="Monitor response, consider bevacizumab (100%)"];
+
+"Poor outcome, consider end-of-life care" -> "Monitor response, continue if beneficial" [label="Symptom management, hospice consideration (4%)"];
+"Poor outcome, consider end-of-life care" -> "Progressive decline, KPS<30" [label="Progressive decline, KPS<30 (96%)"];
+
+"Assess WHO grade, proliferation index, molecular markers" -> "Guide treatment intensity" [label="WHO Grade II/III, Ki-67 >4%, TERT mutation (100%)"];
+"Assess WHO grade, proliferation index, molecular markers" -> "Increase in WHO grade from previous resection" [label="Increase in WHO grade from previous resection "];
+"Assess WHO grade, proliferation index, molecular markers" -> "Assess for TERT, NF2 mutations" [label="Assess for TERT, NF2 mutations "];
+
+"Increase in WHO grade from previous resection" -> "Guide treatment intensity" [label="More aggressive treatment approach "];
+
+"New enhancing nodule <2cm within 3 years" -> "KPS>60, consider further treatment" [label="Consider re-resection vs. SRS "];
+
+"WHO Grade II, post-operative" -> "Monitor response, continue if beneficial" [label="Monitor for radiation effects, tumor control "];
+
+"New enhancement, edema post-radiation" -> "Consider bevacizumab treatment" [label="Consider bevacizumab treatment (100%)"];
+"New enhancement, edema post-radiation" -> "6-8 cycles for radiation necrosis" [label="6-8 cycles for radiation necrosis "];
+
+"Symptomatic recurrence, operable" -> "Guide treatment intensity" [label="Consider additional treatment based on pathology (100%)"];
+
+"Progressive decline, KPS<30" -> "Monitor response, continue if beneficial" [label="Comfort measures, family support (100%)"];
+
+"Evaluate functional status" -> "KPS>60, consider further treatment" [label="KPS>60, consider further treatment "];
+"Evaluate functional status" -> "Poor outcome, consider end-of-life care" [label="KPS<50, limited treatment options "];
+
+"Assess for TERT, NF2 mutations" -> "Guide treatment intensity" [label="Guide treatment intensity "];
+
+"6-8 cycles for radiation necrosis" -> "Monitor response, continue if beneficial" [label="Monitor response, continue if beneficial "];
+
+"Rapid neurological decline, significant mass effect" -> "Poor outcome, consider end-of-life care" [label="Poor outcome, consider end-of-life care "];
+
+
+}

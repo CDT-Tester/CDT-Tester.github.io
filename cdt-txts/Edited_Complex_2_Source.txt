@@ -1,0 +1,47 @@
+digraph G{
+        graph [size="18,12"];
+        node [shape=box]
+    "Meningioma Detected" -> "Symptomatic?" [label="Incidental or symptomatic (100%)"];
+
+"Symptomatic?" -> "Watchful Waiting" [label="No; Asymptomatic; Size <3cm; Non-critical location (4%)"];
+"Symptomatic?" -> "Treatment Decision" [label="Yes; Symptomatic; Size >3cm; Critical location (95%)"];
+
+"Watchful Waiting" -> "Watchful Waiting" [label="Stable; No new symptoms; KPS stable; <1.5mm growth/year (14%)"];
+"Watchful Waiting" -> "Treatment Decision" [label="Tumor growth >1.5mm/year; New symptoms; KPS decline (51%)"];
+"Watchful Waiting" -> "Recurrence Evaluation" [label="New enhancement on MRI; Symptom recurrence; >6 months post-treatment (34%)"];
+
+"Treatment Decision" -> "Surgery" [label="Operable; Progressive symptoms; KPS >60; Size >3cm (59%)"];
+"Treatment Decision" -> "Radiation" [label="Inoperable; Size <3cm; Critical location; Patient preference (38%)"];
+"Treatment Decision" -> "Palliative Care" [label="Multiple recurrences; KPS <50; Extensive tumor burden (2%)"];
+
+"Surgery" -> "Post-operative Evaluation" [label="Resection completed; Assess residual tumor; Simpson grade; Pathology (100%)"];
+
+"Post-operative Evaluation" -> "Watchful Waiting" [label="Total resection; Grade I; Stable symptoms; KPS >80 (34%)"];
+"Post-operative Evaluation" -> "Radiation" [label="Subtotal resection; Residual tumor >1cm; Critical location (19%)"];
+"Post-operative Evaluation" -> "Adjuvant Therapy Decision" [label="WHO Grade II/III; Atypical/Anaplastic features; High MIB-1 index (45%)"];
+
+"Adjuvant Therapy Decision" -> "Radiation" [label="WHO Grade II; Simpson Grade II/III resection; High recurrence risk (86%)"];
+"Adjuvant Therapy Decision" -> "Systemic Therapy" [label="WHO Grade III; Genetic alterations (e.g., TERT); Rapid progression (6%)"];
+"Adjuvant Therapy Decision" -> "Watchful Waiting" [label="WHO Grade II; Complete resection; Low MIB-1 index; Patient preference (6%)"];
+
+"Radiation" -> "Treatment Response Evaluation" [label="SRS/IMRT completed; Assess tumor response; Monitor side effects (100%)"];
+
+"Treatment Response Evaluation" -> "Watchful Waiting" [label="Tumor shrinkage; Symptom improvement; Stable/No side effects (54%)"];
+"Treatment Response Evaluation" -> "Treatment Decision" [label="Tumor growth; Symptom progression; Intolerable side effects (2%)"];
+"Treatment Response Evaluation" -> "Recurrence Evaluation" [label="New lesions; Symptom recurrence; >6 months post-treatment (42%)"];
+
+"Recurrence Evaluation" -> "Surgery" [label="Operable; KPS >60; Limited prior radiation; Single recurrence (48%)"];
+"Recurrence Evaluation" -> "Radiation" [label="Inoperable; KPS >60; No prior radiation; Size <3cm (18%)"];
+"Recurrence Evaluation" -> "Systemic Therapy" [label="Multiple recurrences; Not candidate for surgery/radiation (24%)"];
+"Recurrence Evaluation" -> "Palliative Care" [label="Multifocal recurrence; KPS <50; Limited treatment options (8%)"];
+
+"Systemic Therapy" -> "Treatment Response Evaluation" [label="Assess tumor response; Monitor side effects (52%)"];
+"Systemic Therapy" -> "Palliative Care" [label="Disease progression; KPS decline; Refractory to multiple treatments (47%)"];
+
+"Palliative Care" -> "Symptom Management" [label="Focus on quality of life; Manage symptoms (57%)"];
+"Palliative Care" -> "Hospice Referral" [label="Rapid progression; KPS <40; Limited life expectancy (42%)"];
+
+"Symptom Management" -> "Treatment Decision" [label="Symptoms worsening; Affecting daily life; Patient preference (0%)"];
+
+
+}

@@ -1,0 +1,38 @@
+digraph G{
+        graph [size="18,12"];
+        node [shape=box]
+    "Symptomatic?" -> "No" [label="No (12%)"];
+"Symptomatic?" -> "Yes" [label="Yes (87%)"];
+
+"Yes" -> "Operable" [label="Operable (83%)"];
+"Yes" -> "Incomplete" [label="Inoperable (16%)"];
+
+"Extent of Resection" -> "Complete" [label="Complete (37%)"];
+"Extent of Resection" -> "Incomplete" [label="Incomplete (62%)"];
+
+"Suspected Meningioma" -> "MRI Brain" [label="(100%)"];
+
+"MRI Brain" -> "Tumor Size" [label="(100%)"];
+
+"Tumor Size" -> "<3 cm" [label="(9%)"];
+"Tumor Size" -> ">3 cm" [label="(90%)"];
+
+"<3 cm" -> "Symptomatic?" [label="(100%)"];
+
+">3 cm" -> "Yes" [label="(100%)"];
+
+"Operable" -> "Pathology Grade" [label="(100%)"];
+
+"Pathology Grade" -> "WHO Grade I" [label="(38%)"];
+"Pathology Grade" -> "WHO Grade II/III" [label="(61%)"];
+
+"WHO Grade I" -> "Extent of Resection" [label="(100%)"];
+
+"WHO Grade II/III" -> "Fractionated Radiotherapy" [label="(100%)"];
+
+"Incomplete" -> "Complete" [label="(100%)"];
+
+"Fractionated Radiotherapy" -> "Complete" [label="(100%)"];
+
+
+}
