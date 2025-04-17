@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import DecisionNavigator from './CDT';
 
 const SVGViewer = () => {
   const [selectedSVG, setSelectedSVG] = useState(0);
@@ -11,6 +12,7 @@ const SVGViewer = () => {
   const viewerRef = useRef(null);
   const [showText, setShowText] = useState(false);
   const [textContent, setTextContent] = useState('');
+  const [showDecisionNavigator, setShowDecisionNavigator] = useState(false);
 
   // SVG file paths in public folder
   const svgPaths = [
@@ -155,7 +157,7 @@ const SVGViewer = () => {
 
   return (
     <div className="flex flex-col w-full" style={{height: "90vh" }}>
-      {/* Top SVG display area - now takes most of the screen */}
+      {/* Top SVG or Decision Navigator display area */}
       <div 
         ref={viewerRef}
         className="flex-grow bg-white relative overflow-hidden"
@@ -164,28 +166,30 @@ const SVGViewer = () => {
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
       >
-        {showText ? (
-            <div className="p-6 overflow-auto text-left font-mono whitespace-pre-wrap text-sm text-gray-800 h-full">
-                {textContent || 'Loading text...'}
-            </div>
-            ) : loading ? (
-            <div className="flex items-center justify-center h-full">
-                <div className="text-gray-500">Loading SVG...</div>
-            </div>
-            ) : (
-            <div 
-                style={{
-                transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
-                transformOrigin: '0 0',
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                cursor: isDragging ? 'grabbing' : 'grab'
-                }}
-                dangerouslySetInnerHTML={{ __html: svgContent }}
-            />
+        {showDecisionNavigator ? (
+          <DecisionNavigator treePath={`./txt-cdts/Text_Complex_${selectedSVG + 1}_Tree.txt`}/>
+        ) : showText ? (
+          <div className="p-6 overflow-auto text-left font-mono whitespace-pre-wrap text-sm text-gray-800 h-full">
+            {textContent || 'Loading text...'}
+          </div>
+        ) : loading ? (
+          <div className="flex items-center justify-center h-full">
+            <div className="text-gray-500">Loading SVG...</div>
+          </div>
+        ) : (
+          <div 
+            style={{
+              transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
+              transformOrigin: '0 0',
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              cursor: isDragging ? 'grabbing' : 'grab'
+            }}
+            dangerouslySetInnerHTML={{ __html: svgContent }}
+          />
         )}
       </div>
       
@@ -242,7 +246,15 @@ const SVGViewer = () => {
             >
                     {showText ? 'Show Diagram' : 'Show Text'}
             </button>
-           </div>
+            
+            {/* Toggle DecisionNavigator */}
+            <button
+              className="px-2 py-1 text-sm bg-gray-300 rounded"
+              onClick={() => setShowDecisionNavigator(prev => !prev)}
+            >
+              {showDecisionNavigator ? 'Show Diagram' : 'Show Decision Navigator'}
+            </button>
+          </div>
           
         </div>
       </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SVGViewer from "./SVGViewer";
 import PatientNotesPanel from "./PatientNotesPanel";
 import ResponseForm from "./ResponseForm";
+import DecisionNavigator from "./CDT";
 
 const SimpleNotesWithSVG = () => {
   const [activeTab, setActiveTab] = useState("A");
@@ -36,6 +37,8 @@ const SimpleNotesWithSVG = () => {
                 </>);
         case "E":
                 return <ResponseForm />;
+        case "F":
+                return <DecisionNavigator />;
         default:
                 return <SVGViewer />;
         }
@@ -94,6 +97,16 @@ const SimpleNotesWithSVG = () => {
           onClick={() => setActiveTab("E")}
         >
           Response Form
+        </button>
+        <button
+          className={`px-4 py-2 rounded-t-lg ml-2 ${
+            activeTab === "F"
+              ? "bg-white font-semibold border-t border-l border-r"
+              : "text-gray-500 hover:text-black"
+          }`}
+          onClick={() => setActiveTab("F")}
+        >
+          Decision Navigator
         </button>
       </div>
       
