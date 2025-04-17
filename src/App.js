@@ -98,16 +98,6 @@ const SimpleNotesWithSVG = () => {
         >
           Response Form
         </button>
-        <button
-          className={`px-4 py-2 rounded-t-lg ml-2 ${
-            activeTab === "F"
-              ? "bg-white font-semibold border-t border-l border-r"
-              : "text-gray-500 hover:text-black"
-          }`}
-          onClick={() => setActiveTab("F")}
-        >
-          Decision Navigator
-        </button>
       </div>
       
 
