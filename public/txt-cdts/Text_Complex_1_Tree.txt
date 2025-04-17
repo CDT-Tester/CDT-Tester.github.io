@@ -1,0 +1,63 @@
+## <3 cm ##
+<3 cm -> (100%) -> Symptomatic?
+
+
+## >3 cm ##
+>3 cm -> (100%) -> Yes
+
+
+## Extent of Resection ##
+Extent of Resection -> Complete (37%) -> Complete
+Extent of Resection -> Incomplete (62%) -> Incomplete
+
+
+## Fractionated Radiotherapy ##
+Fractionated Radiotherapy -> (100%) -> Complete
+
+
+## Incomplete ##
+Incomplete -> (100%) -> Complete
+
+
+## MRI Brain ##
+MRI Brain -> (100%) -> Tumor Size
+
+
+## Operable ##
+Operable -> (100%) -> Pathology Grade
+
+
+## Pathology Grade ##
+Pathology Grade -> (38%) -> WHO Grade I
+Pathology Grade -> (61%) -> WHO Grade II/III
+
+
+## Suspected Meningioma ##
+Suspected Meningioma -> (100%) -> MRI Brain
+
+
+## Symptomatic? ##
+Symptomatic? -> No (12%) -> No
+Symptomatic? -> Yes (87%) -> Yes
+
+
+## Tumor Size ##
+Tumor Size -> (9%) -> <3 cm
+Tumor Size -> (90%) -> >3 cm
+
+
+## WHO Grade I ##
+WHO Grade I -> (100%) -> Extent of Resection
+
+
+## WHO Grade II/III ##
+WHO Grade II/III -> (100%) -> Fractionated Radiotherapy
+
+
+## Yes ##
+Yes -> Inoperable (16%) -> Incomplete
+Yes -> Operable (83%) -> Operable
+
+
+Complete -> END OF GRAPH
+No -> END OF GRAPH

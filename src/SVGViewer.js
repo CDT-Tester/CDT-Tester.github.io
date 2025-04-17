@@ -9,6 +9,8 @@ const SVGViewer = () => {
   const [svgContent, setSvgContent] = useState('');
   const [loading, setLoading] = useState(true);
   const viewerRef = useRef(null);
+  const [showText, setShowText] = useState(false);
+  const [textContent, setTextContent] = useState('');
 
   // SVG file paths in public folder
   const svgPaths = [
@@ -34,9 +36,23 @@ const SVGViewer = () => {
         setLoading(false);
       }
     };
-
     loadSvg();
-  }, [selectedSVG]);
+
+    if (showText) {
+        const loadText = async () => {
+          try {
+            const response = await fetch(`/txt-cdts/Text_Complex_${selectedSVG + 1}_Tree.txt`);
+            const text = await response.text();
+            setTextContent(text);
+          } catch (error) {
+            console.error('Error loading text file:', error);
+            setTextContent('Error loading text version of this diagram.');
+          }
+        };
+        loadText();
+      }
+
+  }, [selectedSVG, showText]);
 
   // Handle wheel zoom
   const handleWheel = (e) => {
@@ -69,13 +85,14 @@ const SVGViewer = () => {
   // Add/remove wheel event listener
   useEffect(() => {
     const viewer = viewerRef.current;
-    if (viewer) {
-      viewer.addEventListener('wheel', handleWheel, { passive: false });
-      return () => {
-        viewer.removeEventListener('wheel', handleWheel);
-      };
-    }
-  }, [scale, position]);
+  
+    if (!viewer || showText) return;
+  
+    viewer.addEventListener('wheel', handleWheel, { passive: false });
+    return () => {
+      viewer.removeEventListener('wheel', handleWheel);
+    };
+  }, [scale, position, showText]);
 
   const handleMouseDown = (e) => {
     // Only start dragging on left mouse button
@@ -137,7 +154,7 @@ const SVGViewer = () => {
   }, [svgPaths.length]);
 
   return (
-    <div className="flex flex-col w-full" style={{height: "95vh" }}>
+    <div className="flex flex-col w-full" style={{height: "90vh" }}>
       {/* Top SVG display area - now takes most of the screen */}
       <div 
         ref={viewerRef}
@@ -147,24 +164,28 @@ const SVGViewer = () => {
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
       >
-        {loading ? (
-          <div className="flex items-center justify-center h-full">
-            <div className="text-gray-500">Loading SVG...</div>
-          </div>
-        ) : (
-          <div 
-            style={{
-              transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
-              transformOrigin: '0 0',
-              width: '100%',
-              height: '100%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              cursor: isDragging ? 'grabbing' : 'grab'
-            }}
-            dangerouslySetInnerHTML={{ __html: svgContent }}
-          />
+        {showText ? (
+            <div className="p-6 overflow-auto text-left font-mono whitespace-pre-wrap text-sm text-gray-800 h-full">
+                {textContent || 'Loading text...'}
+            </div>
+            ) : loading ? (
+            <div className="flex items-center justify-center h-full">
+                <div className="text-gray-500">Loading SVG...</div>
+            </div>
+            ) : (
+            <div 
+                style={{
+                transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
+                transformOrigin: '0 0',
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                cursor: isDragging ? 'grabbing' : 'grab'
+                }}
+                dangerouslySetInnerHTML={{ __html: svgContent }}
+            />
         )}
       </div>
       
@@ -212,14 +233,16 @@ const SVGViewer = () => {
               <span className="px-2 py-1 text-sm">{Math.round(scale * 100)}%</span>
             </div>
           </div>
-          
-          {/* Help text */}
+
           <div className="flex flex-col">
-            <div className="text-sm font-semibold mb-1">Controls</div>
-            <div className="text-xs text-gray-600">
-              Scroll to zoom • Drag to pan • +/- keys to zoom • Arrow keys to change diagrams
-            </div>
-          </div>
+             <div className="text-sm font-semibold mb-1">View Mode</div>
+            <button
+                    className="px-2 py-1 text-sm bg-gray-300 rounded"
+                    onClick={() => setShowText(prev => !prev)}
+            >
+                    {showText ? 'Show Diagram' : 'Show Text'}
+            </button>
+           </div>
           
         </div>
       </div>

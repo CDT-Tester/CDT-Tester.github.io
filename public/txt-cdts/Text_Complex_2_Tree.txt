@@ -1,0 +1,69 @@
+## Adjuvant Therapy Decision ##
+Adjuvant Therapy Decision -> WHO Grade II; Simpson Grade II/III resection; High recurrence risk (86%) -> Radiation
+Adjuvant Therapy Decision -> WHO Grade III; Genetic alterations (e.g., TERT); Rapid progression (6%) -> Systemic Therapy
+Adjuvant Therapy Decision -> WHO Grade II; Complete resection; Low MIB-1 index; Patient preference (6%) -> Watchful Waiting
+
+
+## Meningioma Detected ##
+Meningioma Detected -> Incidental or symptomatic (100%) -> Symptomatic?
+
+
+## Palliative Care ##
+Palliative Care -> Rapid progression; KPS <40; Limited life expectancy (42%) -> Hospice Referral
+Palliative Care -> Focus on quality of life; Manage symptoms (57%) -> Symptom Management
+
+
+## Post-operative Evaluation ##
+Post-operative Evaluation -> WHO Grade II/III; Atypical/Anaplastic features; High MIB-1 index (45%) -> Adjuvant Therapy Decision
+Post-operative Evaluation -> Subtotal resection; Residual tumor >1cm; Critical location (19%) -> Radiation
+Post-operative Evaluation -> Total resection; Grade I; Stable symptoms; KPS >80 (34%) -> Watchful Waiting
+
+
+## Radiation ##
+Radiation -> SRS/IMRT completed; Assess tumor response; Monitor side effects (100%) -> Treatment Response Evaluation
+
+
+## Recurrence Evaluation ##
+Recurrence Evaluation -> Multifocal recurrence; KPS <50; Limited treatment options (8%) -> Palliative Care
+Recurrence Evaluation -> Inoperable; KPS >60; No prior radiation; Size <3cm (18%) -> Radiation
+Recurrence Evaluation -> Operable; KPS >60; Limited prior radiation; Single recurrence (48%) -> Surgery
+Recurrence Evaluation -> Multiple recurrences; Not candidate for surgery/radiation (24%) -> Systemic Therapy
+
+
+## Surgery ##
+Surgery -> Resection completed; Assess residual tumor; Simpson grade; Pathology (100%) -> Post-operative Evaluation
+
+
+## Symptom Management ##
+Symptom Management -> Symptoms worsening; Affecting daily life; Patient preference (0%) -> Treatment Decision
+
+
+## Symptomatic? ##
+Symptomatic? -> Yes; Symptomatic; Size >3cm; Critical location (95%) -> Treatment Decision
+Symptomatic? -> No; Asymptomatic; Size <3cm; Non-critical location (4%) -> Watchful Waiting
+
+
+## Systemic Therapy ##
+Systemic Therapy -> Disease progression; KPS decline; Refractory to multiple treatments (47%) -> Palliative Care
+Systemic Therapy -> Assess tumor response; Monitor side effects (52%) -> Treatment Response Evaluation
+
+
+## Treatment Decision ##
+Treatment Decision -> Multiple recurrences; KPS <50; Extensive tumor burden (2%) -> Palliative Care
+Treatment Decision -> Inoperable; Size <3cm; Critical location; Patient preference (38%) -> Radiation
+Treatment Decision -> Operable; Progressive symptoms; KPS >60; Size >3cm (59%) -> Surgery
+
+
+## Treatment Response Evaluation ##
+Treatment Response Evaluation -> New lesions; Symptom recurrence; >6 months post-treatment (42%) -> Recurrence Evaluation
+Treatment Response Evaluation -> Tumor growth; Symptom progression; Intolerable side effects (2%) -> Treatment Decision
+Treatment Response Evaluation -> Tumor shrinkage; Symptom improvement; Stable/No side effects (54%) -> Watchful Waiting
+
+
+## Watchful Waiting ##
+Watchful Waiting -> New enhancement on MRI; Symptom recurrence; >6 months post-treatment (34%) -> Recurrence Evaluation
+Watchful Waiting -> Tumor growth >1.5mm/year; New symptoms; KPS decline (51%) -> Treatment Decision
+Watchful Waiting -> Stable; No new symptoms; KPS stable; <1.5mm growth/year (14%) -> Watchful Waiting
+
+
+Hospice Referral -> END OF GRAPH

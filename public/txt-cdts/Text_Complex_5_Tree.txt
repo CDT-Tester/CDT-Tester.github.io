@@ -1,0 +1,314 @@
+## <3 cm ##
+<3 cm -> unlabeled transition -> Symptom progression
+
+
+## >3 cm ##
+>3 cm -> unlabeled transition -> Severe or progressive symptoms
+
+
+## Accessible location ##
+Accessible location -> unlabeled transition -> Proceed to treatment planning
+
+
+## Age ≥18 years ##
+Age ≥18 years -> Positive family history -> Multiple meningiomas or young age
+Age ≥18 years -> No significant family history -> No significant family history
+
+
+## Annual brain and spine MRI ##
+Annual brain and spine MRI -> Intraventricular mass detected -> Intraventricular mass detected
+Annual brain and spine MRI -> Multiple lesions detected -> Multiple lesions detected
+Annual brain and spine MRI -> Single lesion detected -> Tumor growth >1.5mm/3 months
+
+
+## Assess pregnancy status ##
+Assess pregnancy status -> Not pregnant -> Not pregnant
+Assess pregnancy status -> Pregnant -> Pregnant
+
+
+## Atypical features or subtotal resection ##
+Atypical features or subtotal resection -> Residual >3cm -> Inadequate symptom control
+Atypical features or subtotal resection -> Completed radiation course -> Monitor for response
+Atypical features or subtotal resection -> Residual <3cm -> Recurrence <3cm, good KPS
+
+
+## Challenging location ##
+Challenging location -> unlabeled transition -> Proceed to treatment planning
+Challenging location -> Uncertain diagnosis or rapid growth -> Suspicion of malignant transformation
+
+
+## Check for TERT promoter mutation ##
+Check for TERT promoter mutation -> TERT mutation present -> Inadequate symptom control
+Check for TERT promoter mutation -> NF2 and TERT mutations detected -> Multiple recurrences, WHO Grade II-III
+
+
+## Complete (Simpson I-III) ##
+Complete (Simpson I-III) -> unlabeled transition -> Monitor for response
+
+
+## Consider enrollment if eligible ##
+Consider enrollment if eligible -> Disease progression on trial -> Disease progression on trial
+Consider enrollment if eligible -> Monitor for response -> Monitor for response
+
+
+## Decreased KPS or work capacity ##
+Decreased KPS or work capacity -> KPS <40 or patient preference -> Extensive disease, KPS <50
+Decreased KPS or work capacity -> Improved with supportive care -> Improved with supportive care
+Decreased KPS or work capacity -> Edema-related symptoms -> Increased edema, worsening symptoms
+Decreased KPS or work capacity -> KPS >40 and patient wishes aggressive treatment -> KPS >40 and patient wishes aggressive treatment
+
+
+## Disease progression on trial ##
+Disease progression on trial -> Decreased KPS score -> Decreased KPS or work capacity
+Disease progression on trial -> Evaluate functional status -> Evaluate functional status
+Disease progression on trial -> Extensive disease, KPS <50 -> Extensive disease, KPS <50
+Disease progression on trial -> Hydrocephalus development -> Hydrocephalus development
+Disease progression on trial -> Significant peritumoral edema -> Increased edema, worsening symptoms
+Disease progression on trial -> unlabeled transition -> KPS >40 and patient wishes aggressive treatment
+Disease progression on trial -> Multiple enhancing nodules, CSF dissemination -> Multiple enhancing nodules, CSF dissemination
+Disease progression on trial -> Rapid growth or multiple recurrences -> Multiple recurrences, WHO Grade II-III
+Disease progression on trial -> New neurological deficits -> New neurological deficits
+Disease progression on trial -> Rapid growth or new aggressive features -> Rapid growth or new aggressive features
+Disease progression on trial -> Rapid neurological decline, KPS <30 -> Rapid neurological decline, KPS <30
+Disease progression on trial -> Signs of increased ICP -> Signs of increased ICP
+Disease progression on trial -> Suspicion of malignant transformation -> Suspicion of malignant transformation
+
+
+## Evaluate patient age ##
+Evaluate patient age -> Age <18 years -> Age <18 years
+Evaluate patient age -> Age ≥18 years -> Age ≥18 years
+
+
+## Extensive disease, KPS <50 ##
+Extensive disease, KPS <50 -> End-stage disease -> Extensive disease, KPS <50
+Extensive disease, KPS <50 -> For symptom management -> Increased edema, worsening symptoms
+Extensive disease, KPS <50 -> Temporary improvement in symptoms -> KPS >40 and patient wishes aggressive treatment
+Extensive disease, KPS <50 -> End-stage disease, KPS <30 -> Rapid neurological decline, KPS <30
+
+
+## Extent of Resection ##
+Extent of Resection -> unlabeled transition -> Complete (Simpson I-III)
+Extent of Resection -> unlabeled transition -> Incomplete (Simpson IV-V)
+
+
+## Hydrocephalus development ##
+Hydrocephalus development -> unlabeled transition -> Monitor for response
+
+
+## If prior radiation and progression ##
+If prior radiation and progression -> After careful consideration of risks -> Monitor for response
+
+
+## Improved with supportive care ##
+Improved with supportive care -> Symptom worsening or growth >1.5mm/3 months -> Disease progression on trial
+Improved with supportive care -> Growth >1.5mm/3 months, KPS >70 -> Inadequate symptom control
+Improved with supportive care -> Increased edema, worsening symptoms -> Increased edema, worsening symptoms
+Improved with supportive care -> Stable symptoms and size -> Monitor for response
+Improved with supportive care -> Tumor growth >4mm in 3 months -> New neurological deficits
+Improved with supportive care -> New onset seizures -> New onset seizures
+Improved with supportive care -> Tumor growth >3mm/6 months -> Tumor growth >3mm/6 months
+
+
+## Inadequate symptom control ##
+Inadequate symptom control -> Acute radiation effects -> Increased edema, worsening symptoms
+Inadequate symptom control -> Completed treatment course -> Monitor for response
+Inadequate symptom control -> Inadequate response or progression -> Multiple recurrences, WHO Grade II-III
+
+
+## Incomplete (Simpson IV-V) ##
+Incomplete (Simpson IV-V) -> unlabeled transition -> Atypical features or subtotal resection
+Incomplete (Simpson IV-V) -> Minimal residual, asymptomatic -> Improved with supportive care
+
+
+## Increased edema, worsening symptoms ##
+Increased edema, worsening symptoms -> No improvement or side effects -> Disease progression on trial
+Increased edema, worsening symptoms -> Inadequate symptom control -> Inadequate symptom control
+Increased edema, worsening symptoms -> Symptom improvement -> Monitor for response
+Increased edema, worsening symptoms -> Monitor for steroid-induced changes -> Reports of cognitive changes
+
+
+## KPS >40 and patient wishes aggressive treatment ##
+KPS >40 and patient wishes aggressive treatment -> Poor performance status, multiple prior treatments -> Extensive disease, KPS <50
+KPS >40 and patient wishes aggressive treatment -> If prior radiation and progression -> If prior radiation and progression
+KPS >40 and patient wishes aggressive treatment -> Minimal residual tumor -> Improved with supportive care
+KPS >40 and patient wishes aggressive treatment -> If >3cm or prior radiosurgery -> Inadequate symptom control
+KPS >40 and patient wishes aggressive treatment -> Poor performance status or multiple prior treatments -> Long-term stability (>5 years)
+KPS >40 and patient wishes aggressive treatment -> Multiple recurrences, WHO Grade II-III -> Multiple recurrences, WHO Grade II-III
+KPS >40 and patient wishes aggressive treatment -> If operable and good performance status -> New neurological deficits
+KPS >40 and patient wishes aggressive treatment -> Recurrence <3cm, good KPS -> Recurrence <3cm, good KPS
+
+
+## Long-term stability (>5 years) ##
+Long-term stability (>5 years) -> Symptom progression -> Symptom progression
+Long-term stability (>5 years) -> Tumor growth >1.5mm/3 months -> Tumor growth >1.5mm/3 months
+
+
+## Monitor for response ##
+Monitor for response -> Decreased KPS or work capacity -> Decreased KPS or work capacity
+Monitor for response -> Growth >1.5mm/3 months or new symptoms -> Disease progression on trial
+Monitor for response -> Stable/decreased size, improved symptoms -> Improved with supportive care
+Monitor for response -> Recurrent seizures or increasing headaches -> KPS >40 and patient wishes aggressive treatment
+Monitor for response -> Long-term stability (>5 years) -> Long-term stability (>5 years)
+Monitor for response -> Stable for <5 years -> Monitor for response
+Monitor for response -> Multiple meningiomas or young age -> Multiple meningiomas or young age
+Monitor for response -> Multiple recurrences after radiation -> Multiple recurrences, WHO Grade II-III
+Monitor for response -> New lesion on follow-up imaging -> New lesion on follow-up imaging
+Monitor for response -> New onset seizures -> New onset seizures
+Monitor for response -> Reports of cognitive changes -> Reports of cognitive changes
+Monitor for response -> Growth of small, previously observed lesion -> Tumor growth >3mm/6 months
+
+
+## Multiple enhancing nodules, CSF dissemination ##
+Multiple enhancing nodules, CSF dissemination -> Palliative treatment attempt -> Palliative treatment attempt
+
+
+## Multiple lesions detected ##
+Multiple lesions detected -> Test for NF2 and other mutations -> Multiple meningiomas or young age
+Multiple lesions detected -> Proceed to treatment planning -> Proceed to treatment planning
+
+
+## Multiple meningiomas or young age ##
+Multiple meningiomas or young age -> Proceed with imaging regardless of result -> Annual brain and spine MRI
+Multiple meningiomas or young age -> NF2 mutation detected -> NF2 mutation detected
+
+
+## Multiple recurrences, WHO Grade II-III ##
+Multiple recurrences, WHO Grade II-III -> No response after 3 months -> Disease progression on trial
+Multiple recurrences, WHO Grade II-III -> Monitor for response and side effects -> Monitor for response
+
+
+## NF2 mutation detected ##
+NF2 mutation detected -> Annual brain and spine MRI -> Annual brain and spine MRI
+
+
+## New lesion on follow-up imaging ##
+New lesion on follow-up imaging -> Asymptomatic and <1cm -> Improved with supportive care
+New lesion on follow-up imaging -> unlabeled transition -> KPS >40 and patient wishes aggressive treatment
+New lesion on follow-up imaging -> Large recurrence (>3cm) or symptomatic -> New neurological deficits
+New lesion on follow-up imaging -> Small recurrence (<3cm) after prior radiation -> Recurrence <3cm, good KPS
+
+
+## New neurological deficits ##
+New neurological deficits -> Multiple meningiomas or age <40 -> Multiple meningiomas or young age
+New neurological deficits -> Post-operative seizures -> New onset seizures
+New neurological deficits -> unlabeled transition -> Pathology Grade
+New neurological deficits -> Posterior fossa tumor -> Posterior fossa tumor
+
+
+## New onset seizures ##
+New onset seizures -> Controlled with medication -> Improved with supportive care
+New onset seizures -> Refractory seizures -> KPS >40 and patient wishes aggressive treatment
+New onset seizures -> Controlled with medication -> Monitor for response
+
+
+## No significant family history ##
+No significant family history -> No radiation history -> Annual brain and spine MRI
+No significant family history -> History of radiation exposure -> Multiple meningiomas or young age
+
+
+## Not pregnant ##
+Not pregnant -> Poor performance status or patient preference -> Improved with supportive care
+Not pregnant -> Good performance status (KPS >70) -> New neurological deficits
+Not pregnant -> Large tumor or near critical structures -> Tumor growth >3mm/6 months
+
+
+## Palliative treatment attempt ##
+Palliative treatment attempt -> No response or disease progression -> Disease progression on trial
+Palliative treatment attempt -> Monitor for response -> Monitor for response
+
+
+## Pathology Grade ##
+Pathology Grade -> unlabeled transition -> WHO Grade I
+Pathology Grade -> unlabeled transition -> WHO Grade II
+Pathology Grade -> unlabeled transition -> WHO Grade III
+
+
+## Posterior fossa tumor ##
+Posterior fossa tumor -> Postoperative edema -> Postoperative edema
+
+
+## Postoperative edema ##
+Postoperative edema -> Progressive neurological decline -> Extensive disease, KPS <50
+
+
+## Pregnant ##
+Pregnant -> Early pregnancy, stable symptoms -> Improved with supportive care
+Pregnant -> Late pregnancy, severe symptoms -> New neurological deficits
+
+
+## Proceed to treatment planning ##
+Proceed to treatment planning -> Assess pregnancy status -> Assess pregnancy status
+Proceed to treatment planning -> Assess visual symptoms -> Assess visual symptoms
+Proceed to treatment planning -> Patient preference, KPS >70, mild symptoms -> Improved with supportive care
+
+
+## Rapid growth or new aggressive features ##
+Rapid growth or new aggressive features -> Poor prognosis or patient preference -> Extensive disease, KPS <50
+Rapid growth or new aggressive features -> unlabeled transition -> Suspicion of malignant transformation
+
+
+## Recurrence <3cm, good KPS ##
+Recurrence <3cm, good KPS -> Post-SRS monitoring -> Monitor for response
+
+
+## Reports of cognitive changes ##
+Reports of cognitive changes -> Stable or improved cognition -> Improved with supportive care
+Reports of cognitive changes -> Significant cognitive decline -> KPS >40 and patient wishes aggressive treatment
+Reports of cognitive changes -> Stable cognition -> Monitor for response
+
+
+## Severe or progressive symptoms ##
+Severe or progressive symptoms -> Accessible location -> Accessible location
+Severe or progressive symptoms -> Challenging location -> Challenging location
+
+
+## Signs of increased ICP ##
+Signs of increased ICP -> Symptomatic hydrocephalus -> Hydrocephalus development
+
+
+## Suspected Meningioma ##
+Suspected Meningioma -> Evaluate patient age -> Evaluate patient age
+
+
+## Suspicion of malignant transformation ##
+Suspicion of malignant transformation -> unlabeled transition -> Pathology Grade
+
+
+## Symptom progression ##
+Symptom progression -> No or mild symptoms (<3 headaches/week) -> Long-term stability (>5 years)
+Symptom progression -> Intractable symptoms -> New neurological deficits
+Symptom progression -> Severe or progressive symptoms -> Severe or progressive symptoms
+
+
+## Tumor growth >1.5mm/3 months ##
+Tumor growth >1.5mm/3 months -> <3 cm -> <3 cm
+Tumor growth >1.5mm/3 months -> >3 cm -> >3 cm
+
+
+## Tumor growth >3mm/6 months ##
+Tumor growth >3mm/6 months -> Size >3cm or near critical structures -> Inadequate symptom control
+Tumor growth >3mm/6 months -> Size <3cm, non-critical location -> Recurrence <3cm, good KPS
+
+
+## WHO Grade I ##
+WHO Grade I -> unlabeled transition -> Extent of Resection
+
+
+## WHO Grade II ##
+WHO Grade II -> Atypical features or subtotal resection -> Atypical features or subtotal resection
+WHO Grade II -> Check for TERT promoter mutation -> Check for TERT promoter mutation
+WHO Grade II -> unlabeled transition -> Extent of Resection
+WHO Grade II -> Recurrent or progressive despite local therapies -> Multiple recurrences, WHO Grade II-III
+
+
+## WHO Grade III ##
+WHO Grade III -> Consider enrollment if eligible -> Consider enrollment if eligible
+WHO Grade III -> unlabeled transition -> Extent of Resection
+WHO Grade III -> Consider concurrent with radiotherapy -> Multiple recurrences, WHO Grade II-III
+
+
+Age <18 years -> END OF GRAPH
+Assess visual symptoms -> END OF GRAPH
+Evaluate functional status -> END OF GRAPH
+Intraventricular mass detected -> END OF GRAPH
+Rapid neurological decline, KPS <30 -> END OF GRAPH

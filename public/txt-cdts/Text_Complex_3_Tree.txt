@@ -1,0 +1,118 @@
+## 6-8 cycles for radiation necrosis ##
+6-8 cycles for radiation necrosis -> Monitor response, continue if beneficial  -> Monitor response, continue if beneficial
+
+
+## Assess WHO grade, proliferation index, molecular markers ##
+Assess WHO grade, proliferation index, molecular markers -> Assess for TERT, NF2 mutations  -> Assess for TERT, NF2 mutations
+Assess WHO grade, proliferation index, molecular markers -> WHO Grade II/III, Ki-67 >4%, TERT mutation (100%) -> Guide treatment intensity
+Assess WHO grade, proliferation index, molecular markers -> Increase in WHO grade from previous resection  -> Increase in WHO grade from previous resection
+
+
+## Assess for TERT, NF2 mutations ##
+Assess for TERT, NF2 mutations -> Guide treatment intensity  -> Guide treatment intensity
+
+
+## Consider bevacizumab treatment ##
+Consider bevacizumab treatment -> Monitor response, consider bevacizumab (100%) -> Monitor response, continue if beneficial
+
+
+## Dural-based mass identified ##
+Dural-based mass identified -> Evaluate tumor size, location, symptoms, KPS (100%) -> KPS>60, consider further treatment
+
+
+## Evaluate functional status ##
+Evaluate functional status -> KPS>60, consider further treatment  -> KPS>60, consider further treatment
+Evaluate functional status -> KPS<50, limited treatment options  -> Poor outcome, consider end-of-life care
+
+
+## Grade II/III or residual tumor ##
+Grade II/III or residual tumor -> Monitor response, 3-month MRI (100%) -> Monitor response, continue if beneficial
+
+
+## Growth >1.5mm/year, new enhancement, or symptom progression ##
+Growth >1.5mm/year, new enhancement, or symptom progression -> Multiple recurrences, not amenable to local therapy (9%) -> Consider bevacizumab treatment
+Growth >1.5mm/year, new enhancement, or symptom progression -> Good functional status (KPS>60) (36%) -> KPS>60, consider further treatment
+Growth >1.5mm/year, new enhancement, or symptom progression -> Poor prognosis, patient preference, KPS<40 (18%) -> Poor outcome, consider end-of-life care
+Growth >1.5mm/year, new enhancement, or symptom progression -> Small volume recurrence (<2cm), prior radiation (17%) -> Small volume recurrence (<2cm), prior radiation
+Growth >1.5mm/year, new enhancement, or symptom progression -> Symptomatic recurrence, operable (16%) -> Symptomatic recurrence, operable
+
+
+## Guide treatment intensity ##
+Guide treatment intensity -> Grade II/III or residual tumor (24%) -> Grade II/III or residual tumor
+Guide treatment intensity -> Complete adjuvant therapy (75%) -> Monitor response, continue if beneficial
+Guide treatment intensity -> WHO Grade II, post-operative  -> WHO Grade II, post-operative
+
+
+## Increase in WHO grade from previous resection ##
+Increase in WHO grade from previous resection -> More aggressive treatment approach  -> Guide treatment intensity
+
+
+## KPS>60, consider further treatment ##
+KPS>60, consider further treatment -> Inoperable, deep location, KPS>60 (9%) -> Grade II/III or residual tumor
+KPS>60, consider further treatment -> 1-3cm, mild symptoms, patient preference (8%) -> Small volume recurrence (<2cm), prior radiation
+KPS>60, consider further treatment -> Asymptomatic, <3cm, stable, KPS>70 (4%) -> Stable, improved symptoms
+KPS>60, consider further treatment -> Symptomatic, ≥3cm, accessible, KPS>60 (76%) -> Symptomatic, ≥3cm, accessible, KPS>60
+
+
+## Monitor response, continue if beneficial ##
+Monitor response, continue if beneficial -> Evaluate functional status  -> Evaluate functional status
+Monitor response, continue if beneficial -> Growth >1.5mm/year, new enhancement, or symptom progression (81%) -> Growth >1.5mm/year, new enhancement, or symptom progression
+Monitor response, continue if beneficial -> New enhancement, edema post-radiation  -> New enhancement, edema post-radiation
+Monitor response, continue if beneficial -> New enhancing nodule <2cm within 3 years  -> New enhancing nodule <2cm within 3 years
+Monitor response, continue if beneficial -> Multiple recurrences, KPS<50 (8%) -> Poor outcome, consider end-of-life care
+Monitor response, continue if beneficial -> Rapid neurological decline, significant mass effect  -> Rapid neurological decline, significant mass effect
+Monitor response, continue if beneficial -> Stable, improved symptoms (9%) -> Stable, improved symptoms
+
+
+## New enhancement, edema post-radiation ##
+New enhancement, edema post-radiation -> 6-8 cycles for radiation necrosis  -> 6-8 cycles for radiation necrosis
+New enhancement, edema post-radiation -> Consider bevacizumab treatment (100%) -> Consider bevacizumab treatment
+
+
+## New enhancing nodule <2cm within 3 years ##
+New enhancing nodule <2cm within 3 years -> Consider re-resection vs. SRS  -> KPS>60, consider further treatment
+
+
+## Poor outcome, consider end-of-life care ##
+Poor outcome, consider end-of-life care -> Symptom management, hospice consideration (4%) -> Monitor response, continue if beneficial
+Poor outcome, consider end-of-life care -> Progressive decline, KPS<30 (96%) -> Progressive decline, KPS<30
+
+
+## Progressive decline, KPS<30 ##
+Progressive decline, KPS<30 -> Comfort measures, family support (100%) -> Monitor response, continue if beneficial
+
+
+## Progressive headaches, weakness, visual symptoms ##
+Progressive headaches, weakness, visual symptoms -> Dural-based mass identified (100%) -> Dural-based mass identified
+
+
+## Rapid neurological decline, significant mass effect ##
+Rapid neurological decline, significant mass effect -> Poor outcome, consider end-of-life care  -> Poor outcome, consider end-of-life care
+
+
+## Small volume recurrence (<2cm), prior radiation ##
+Small volume recurrence (<2cm), prior radiation -> 3-6 month post-treatment imaging (100%) -> Monitor response, continue if beneficial
+
+
+## Stable, improved symptoms ##
+Stable, improved symptoms -> Growth >1.5mm/year or new symptoms  -> KPS>60, consider further treatment
+Stable, improved symptoms -> 3-6 month imaging (100%) -> Monitor response, continue if beneficial
+
+
+## Suspected Meningioma ##
+Suspected Meningioma -> Progressive headaches, weakness, visual symptoms (100%) -> Progressive headaches, weakness, visual symptoms
+
+
+## Symptomatic recurrence, operable ##
+Symptomatic recurrence, operable -> Consider additional treatment based on pathology (100%) -> Guide treatment intensity
+
+
+## Symptomatic, ≥3cm, accessible, KPS>60 ##
+Symptomatic, ≥3cm, accessible, KPS>60 -> Assess WHO grade, proliferation index, molecular markers (49%) -> Assess WHO grade, proliferation index, molecular markers
+Symptomatic, ≥3cm, accessible, KPS>60 -> Incomplete resection or high grade (19%) -> Guide treatment intensity
+Symptomatic, ≥3cm, accessible, KPS>60 -> Complete resection (Simpson I-III) (31%) -> Monitor response, continue if beneficial
+
+
+## WHO Grade II, post-operative ##
+WHO Grade II, post-operative -> Monitor for radiation effects, tumor control  -> Monitor response, continue if beneficial
+
