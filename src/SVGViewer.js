@@ -156,7 +156,7 @@ const SVGViewer = () => {
   }, [svgPaths.length]);
 
   return (
-    <div className="flex flex-col w-full" style={{height: "90vh" }}>
+    <div className="flex flex-col w-full" style={{height: "88vh" }}>
       {/* Top SVG or Decision Navigator display area */}
       <div 
         ref={viewerRef}
@@ -242,7 +242,7 @@ const SVGViewer = () => {
              <div className="text-sm font-semibold mb-1">View Mode</div>
             <button
                     className="px-2 py-1 text-sm bg-gray-300 rounded"
-                    onClick={() => setShowText(prev => !prev)}
+                    onClick={() => {setShowText(prev => !prev); setShowDecisionNavigator(false)}}
             >
                     {showText ? 'Show Diagram' : 'Show Text'}
             </button>
@@ -252,7 +252,7 @@ const SVGViewer = () => {
               className="px-2 py-1 text-sm bg-gray-300 rounded"
               onClick={() => setShowDecisionNavigator(prev => !prev)}
             >
-              {showDecisionNavigator ? 'Show Diagram' : 'Show Decision Navigator'}
+              {showDecisionNavigator ? (showText ? 'Show Text': 'Show Diagram') : 'Show Decision Navigator'}
             </button>
           </div>
           
