@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 
-const PatientNotesPanel = ({ csvPath = './syn-clinical-notes/reference-patients.csv' }) => {
+const PatientNotesPanel = ({ 
+  csvPath = './syn-clinical-notes/reference-patients.csv', 
+  rarePath ="./syn-clinical-notes/rare-patients.csv", 
+  isTesting=false 
+}) => {
   const [patients, setPatients] = useState([]);
   const [selectedPatientIndex, setSelectedPatientIndex] = useState(0);
   const [viewMode, setViewMode] = useState('aggressive');
@@ -11,29 +15,73 @@ const PatientNotesPanel = ({ csvPath = './syn-clinical-notes/reference-patients.
   useEffect(() => {
     const loadPatients = async () => {
       try {
-        const response = await fetch(csvPath);
-        const csvText = await response.text();
+        const [csvResponse, rareResponse] = await Promise.all([
+          fetch(csvPath),
+          fetch(rarePath)
+        ]);
+  
+        const [csvText, rareText] = await Promise.all([
+          csvResponse.text(),
+          rareResponse.text()
+        ]);
+  
+        const parseCSV = (text) =>
+          new Promise((resolve, reject) => {
+            Papa.parse(text, {
+              header: true,
+              skipEmptyLines: true,
+              complete: (results) => resolve(results.data),
+              error: (error) => reject(error)
+            });
+          });
+  
+        const [regularPatients, rarePatients] = await Promise.all([
+          parseCSV(csvText),
+          parseCSV(rareText)
+        ]);
 
-        Papa.parse(csvText, {
-          header: true,
-          skipEmptyLines: true,
-          complete: (results) => {
-            setPatients(results.data);
-            setLoading(false);
-          },
-          error: (error) => {
-            console.error('CSV parse error:', error);
-            setLoading(false);
-          }
-        });
+        if (isTesting) {
+          // Pick 2 regular + 1 rare
+          const regularSpliced = regularPatients.slice(22, 24);
+          const rareSpliced = rarePatients.slice(4, 5);
+          var selected = [...regularSpliced, ...rareSpliced];
+
+          // Trim notes to first 3 sections
+          selected = selected.map((patient) => {
+            const trimNotes = (noteField) => {
+              if (typeof noteField !== 'string') return '';
+              const sections = noteField
+                .split('---')
+                .map(s => s.trim())
+                .filter(s => s); // Remove empty sections
+              return sections.slice(0, 3).join('---');
+            };
+            return {
+              ...patient,
+              Aggressive_Notes: trimNotes(patient.Aggressive_Notes),
+              Conservative_Notes: trimNotes(patient.Conservative_Notes),
+            };
+          });
+
+          setPatients(selected);
+        } else {
+          const selectedRarePatients = rarePatients.slice(0, 2);
+          const shuffled = regularPatients.sort(() => 0.5 - Math.random());
+          const selected = shuffled.slice(0, 18);
+
+          const combined = [...selectedRarePatients, ...selected].sort(() => 0.5 - Math.random());
+    
+          setPatients(combined);
+        }
       } catch (err) {
-        console.error('Error loading CSV:', err);
+        console.error('Error loading CSVs:', err);
+      } finally {
         setLoading(false);
       }
     };
-
+  
     loadPatients();
-  }, [csvPath]);
+  }, [csvPath, rarePath]);
 
   const selectedPatient = patients[selectedPatientIndex];
 

@@ -20,44 +20,35 @@ const SequentialClinicalApp = () => {
     {
       id: 0,
       title: "Reference Clinical Notes",
-      task: "Read 20 clinical notes of your choice and learn about meningiomas",
+      task: "Read these clinical notes to help round out your understanding of meningioma management",
       component: <PatientNotesPanel csvPath="./syn-clinical-notes/reference-patients.csv" />
+    },
+    {
+        id: 2,
+        title: "Response Form",
+        task: "Please Respond to the Form",
+        component: <ResponseForm formPath="https://docs.google.com/forms/d/e/1FAIpQLSfglmcTZX3bYgmuMOseBXOppflGqAjt5YfuELwtew82rcMjWA/viewform?usp=header"/>
     },
     {
         id: 1,
         title: "Clinical Decision Trees",
-        task: "Study these decision trees and learn about meningiomas",
+        task: "Study these decision trees to help round out your understanding of meningioma management.\n Using the buttons in the bottom right and left change the format and complexity of the tree.  You can choose between a graphical, text-based, or interactive tree.",
         component: <SVGViewer />
     },
     {
         id: 2,
         title: "Response Form",
         task: "Please Respond to the Form",
-        component: <ResponseForm formPath="https://docs.google.com/forms/d/e/1FAIpQLSc4bugTyune5cpgQMqkokRxMcBro5OswNHiVYoSTdWiGZLMTA/viewform?usp=dialog"/>
-    },
-    {
-      id: 3,
-      title: "Standard Case Comparison",
-      task: "Pick 2 cases and use the references to help you treat the patient and follow their journey",
-      component: (
-        <div className="flex w-full">
-          <div className="w-1/2 p-4 overflow-auto bg-gray-50 border-r">
-            <PatientNotesPanel csvPath="./syn-clinical-notes/test-patients.csv" />
-          </div>
-          <div className="w-1/2 p-4 overflow-auto bg-gray-50">
-            <SVGViewer />
-          </div>
-        </div>
-      )
+        component: <ResponseForm formPath="https://docs.google.com/forms/d/e/1FAIpQLSdMXZLU5-2UsxmkQ89VBiQO4XEOicTjQhFqTrpAEmRlO5_N_A/viewform?usp=sharing"/>
     },
     {
         id: 4,
         title: "Rare Case Comparison",
-        task: "Pick 2 cases and use the references to help you treat the patient and follow their journey",
+        task: "Use the partial set of notes and clinical decision trees to suggest treatment and management strategies.",
         component: (
           <div className="flex w-full">
             <div className="w-1/2 p-4 overflow-auto bg-gray-50 border-r">
-              <PatientNotesPanel csvPath="./syn-clinical-notes/rare-patients.csv" />
+              <PatientNotesPanel csvPath="./syn-clinical-notes/test-patients.csv" isTesting={true} />
             </div>
             <div className="w-1/2 p-4 overflow-auto bg-gray-50">
               <SVGViewer />
