@@ -55,7 +55,7 @@ const SequentialClinicalApp = () => {
     },
     {
         id: 6,
-        title: "Rare Case Comparison",
+        title: "Treatment Decisions",
         task: "Use the partial set of notes and clinical decision trees to suggest treatment and management strategies. Use any settings on the tree that you find most useful.",
         component: (
           <div className="flex w-full">
