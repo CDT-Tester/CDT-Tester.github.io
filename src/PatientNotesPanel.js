@@ -8,7 +8,6 @@ const PatientNotesPanel = ({
 }) => {
   const [patients, setPatients] = useState([]);
   const [selectedPatientIndex, setSelectedPatientIndex] = useState(0);
-  const [viewMode, setViewMode] = useState('aggressive');
   const [selectedNoteSection, setSelectedNoteSection] = useState(0);
   const [loading, setLoading] = useState(true);
 
@@ -63,7 +62,12 @@ const PatientNotesPanel = ({
             };
           });
 
-          setPatients(selected);
+          const withViewMode = selected.map(patient => ({
+            ...patient,
+            Assigned_ViewMode: Math.random() < 0.5 ? 'aggressive' : 'conservative'
+          }));
+          
+          setPatients(withViewMode);
         } else {
           const selectedRarePatients = rarePatients.slice(0, 2);
           const shuffled = regularPatients.sort(() => 0.5 - Math.random());
@@ -71,7 +75,12 @@ const PatientNotesPanel = ({
 
           const combined = [...selectedRarePatients, ...selected].sort(() => 0.5 - Math.random());
     
-          setPatients(combined);
+          const withViewMode = combined.map(patient => ({
+            ...patient,
+            Assigned_ViewMode: Math.random() < 0.5 ? 'aggressive' : 'conservative'
+          }));
+          
+          setPatients(withViewMode);
         }
       } catch (err) {
         console.error('Error loading CSVs:', err);
@@ -88,8 +97,8 @@ const PatientNotesPanel = ({
   const getNoteSections = () => {
     if (!selectedPatient) return [];
     
-    const notesField = viewMode === 'aggressive' 
-      ? selectedPatient.Aggressive_Notes 
+    const notesField = selectedPatient.Assigned_ViewMode === 'aggressive'
+      ? selectedPatient.Aggressive_Notes
       : selectedPatient.Conservative_Notes;
     
     if (!notesField) return ["No notes available."];
@@ -147,21 +156,6 @@ const PatientNotesPanel = ({
                 {patient.Age}y/o {patient.Gender} - {patient.Meningioma_Grade}
               </option>
             ))}
-          </select>
-        </div>
-
-        <div className="w-1/3">
-          <label className="block text-sm font-medium text-gray-700 mb-1">Management Approach:</label>
-          <select
-            value={viewMode}
-            onChange={(e) => {
-              setViewMode(e.target.value);
-              setSelectedNoteSection(0); // Reset note section when changing view mode
-            }}
-            className="block w-full p-2 border border-gray-300 rounded-md"
-          >
-            <option value="aggressive">Aggressive</option>
-            <option value="conservative">Conservative</option>
           </select>
         </div>
 

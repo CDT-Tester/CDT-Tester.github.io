@@ -156,7 +156,7 @@ const SVGViewer = () => {
   }, [svgPaths.length]);
 
   return (
-    <div className="flex flex-col w-full" style={{height: "88vh" }}>
+    <div className="flex flex-col w-full" style={{height: "80vh" }}>
       {/* Top SVG or Decision Navigator display area */}
       <div 
         ref={viewerRef}
