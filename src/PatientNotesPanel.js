@@ -70,7 +70,7 @@ const PatientNotesPanel = ({
           setPatients(withViewMode);
         } else {
           const selectedRarePatients = [rarePatients[1]];
-          const selected = [regularPatients[3], regularPatients[12], regularPatients[16]];
+          const selected = [regularPatients[3], regularPatients[16]];
 
           const combined = [...selectedRarePatients, ...selected].sort(() => 0.5 - Math.random());
     
