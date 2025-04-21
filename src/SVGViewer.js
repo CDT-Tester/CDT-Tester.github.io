@@ -17,11 +17,13 @@ const SVGViewer = () => {
   // SVG file paths in public folder
   const svgPaths = [
     '/cdt-svgs/Final_Complex_1_Flowchart.svg',
+    '/cdt-svgs/Final_Complex_6_Flowchart.svg',
     '/cdt-svgs/Final_Complex_2_Flowchart.svg',
     '/cdt-svgs/Final_Complex_3_Flowchart.svg',
     '/cdt-svgs/Final_Complex_4_Flowchart.svg',
-    '/cdt-svgs/Final_Complex_5_Flowchart.svg',
   ];
+
+  const textNumber = [1, 6, 2, 3, 4];
 
   // Load SVG content when selected SVG changes
   useEffect(() => {
@@ -43,7 +45,7 @@ const SVGViewer = () => {
     if (showText) {
         const loadText = async () => {
           try {
-            const response = await fetch(`/txt-cdts/Text_Complex_${selectedSVG + 1}_Tree.txt`);
+            const response = await fetch(`/txt-cdts/Text_Complex_${textNumber[selectedSVG]}_Tree.txt`);
             const text = await response.text();
             setTextContent(text);
           } catch (error) {
@@ -167,7 +169,7 @@ const SVGViewer = () => {
         onMouseLeave={handleMouseUp}
       >
         {showDecisionNavigator ? (
-          <DecisionNavigator treePath={`./txt-cdts/Text_Complex_${selectedSVG + 1}_Tree.txt`}/>
+          <DecisionNavigator treePath={`./txt-cdts/Text_Complex_${textNumber[selectedSVG]}_Tree.txt`}/>
         ) : showText ? (
           <div className="p-6 overflow-auto text-left font-mono whitespace-pre-wrap text-sm text-gray-800 h-full">
             {textContent || 'Loading text...'}

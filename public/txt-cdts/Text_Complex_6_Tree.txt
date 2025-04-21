@@ -1,0 +1,48 @@
+## Atypical features or Early recurrence ##
+Atypical features or Early recurrence -> Mutations detected (66%) -> New issues on follow-up
+Atypical features or Early recurrence -> No significant mutations (33%) -> Stable/Partial response
+
+
+## Large, Symptomatic, or Patient Preference ##
+Large, Symptomatic, or Patient Preference -> Atypical features or Early recurrence (4%) -> Atypical features or Early recurrence
+Large, Symptomatic, or Patient Preference -> Complete treatment, Good response (95%) -> Stable/Partial response
+
+
+## MRI Brain & Tumor Assessment Size, Number, Location, Symptoms ##
+MRI Brain & Tumor Assessment Size, Number, Location, Symptoms -> (100%) -> New issues on follow-up
+
+
+## New issues on follow-up ##
+New issues on follow-up -> Large, Symptomatic, or Patient Preference (72%) -> Large, Symptomatic, or Patient Preference
+New issues on follow-up -> Poor prognosis, Patient preference (14%) -> Poor prognosis, Patient preference
+New issues on follow-up -> Recurrent, Failed standard treatments (3%) -> Recurrent, Failed standard treatments
+New issues on follow-up -> Small, Asymptomatic, Slow growth (9%) -> Stable long-term, Asymptomatic
+
+
+## Recurrent, Failed standard treatments ##
+Recurrent, Failed standard treatments -> Progression/Intolerable side effects (40%) -> Poor prognosis, Patient preference
+Recurrent, Failed standard treatments -> Stable/Partial response (60%) -> Stable/Partial response
+
+
+## Stable long-term, Asymptomatic ##
+Stable long-term, Asymptomatic -> Growth or New symptoms (43%) -> New issues on follow-up
+Stable long-term, Asymptomatic -> Stable (56%) -> Stable/Partial response
+
+
+## Stable/Partial response ##
+Stable/Partial response -> New issues on follow-up (2%) -> New issues on follow-up
+Stable/Partial response -> Refractory Symptoms, Multiple recurrences (2%) -> Poor prognosis, Patient preference
+Stable/Partial response -> Stable long-term, Asymptomatic (12%) -> Stable long-term, Asymptomatic
+Stable/Partial response -> Tumor Growth, New/Worsening Symptoms (83%) -> Tumor Growth, New/Worsening Symptoms
+
+
+## Suspected Meningioma ##
+Suspected Meningioma -> (100%) -> MRI Brain & Tumor Assessment Size, Number, Location, Symptoms
+
+
+## Tumor Growth, New/Worsening Symptoms ##
+Tumor Growth, New/Worsening Symptoms -> Reassess (98%) -> New issues on follow-up
+Tumor Growth, New/Worsening Symptoms -> Rapid progression, Limited options (1%) -> Poor prognosis, Patient preference
+
+
+Poor prognosis, Patient preference -> END OF GRAPH

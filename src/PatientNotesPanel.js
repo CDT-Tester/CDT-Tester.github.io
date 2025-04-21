@@ -69,15 +69,14 @@ const PatientNotesPanel = ({
           
           setPatients(withViewMode);
         } else {
-          const selectedRarePatients = rarePatients.slice(0, 2);
-          const shuffled = regularPatients.sort(() => 0.5 - Math.random());
-          const selected = shuffled.slice(0, 18);
+          const selectedRarePatients = [rarePatients[1]];
+          const selected = [regularPatients[3], regularPatients[12], regularPatients[16]];
 
           const combined = [...selectedRarePatients, ...selected].sort(() => 0.5 - Math.random());
     
           const withViewMode = combined.map(patient => ({
             ...patient,
-            Assigned_ViewMode: Math.random() < 0.5 ? 'aggressive' : 'conservative'
+            Assigned_ViewMode: 'aggressive'
           }));
           
           setPatients(withViewMode);
