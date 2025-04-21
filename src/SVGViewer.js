@@ -20,10 +20,9 @@ const SVGViewer = () => {
     '/cdt-svgs/Final_Complex_6_Flowchart.svg',
     '/cdt-svgs/Final_Complex_2_Flowchart.svg',
     '/cdt-svgs/Final_Complex_3_Flowchart.svg',
-    '/cdt-svgs/Final_Complex_4_Flowchart.svg',
   ];
 
-  const textNumber = [1, 6, 2, 3, 4];
+  const textNumber = [1, 6, 2, 3];
 
   // Load SVG content when selected SVG changes
   useEffect(() => {

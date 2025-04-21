@@ -53,7 +53,7 @@ const PatientNotesPanel = ({
                 .split('---')
                 .map(s => s.trim())
                 .filter(s => s); // Remove empty sections
-              return sections.slice(0, 3).join('---');
+              return sections.slice(0, 2).join('---');
             };
             return {
               ...patient,
@@ -72,8 +72,24 @@ const PatientNotesPanel = ({
           const selectedRarePatients = [rarePatients[1]];
           const selected = [regularPatients[3], regularPatients[16]];
 
-          const combined = [...selectedRarePatients, ...selected].sort(() => 0.5 - Math.random());
+          var combined = [...selectedRarePatients, ...selected].sort(() => 0.5 - Math.random());
     
+          combined = combined.map((patient) => {
+            const trimNotes = (noteField) => {
+              if (typeof noteField !== 'string') return '';
+              const sections = noteField
+                .split('---')
+                .map(s => s.trim())
+                .filter(s => s); // Remove empty sections
+              return sections.slice(0, 8).join('---');
+            };
+            return {
+              ...patient,
+              Aggressive_Notes: trimNotes(patient.Aggressive_Notes),
+              Conservative_Notes: trimNotes(patient.Conservative_Notes),
+            };
+          });
+
           const withViewMode = combined.map(patient => ({
             ...patient,
             Assigned_ViewMode: 'aggressive'
