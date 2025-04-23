@@ -1,0 +1,81 @@
+## Bevacizumab Regimen or biosimilar ##
+Bevacizumab Regimen or biosimilar -> Monitor response (96%) -> Repeated Imaging every 3-6 months
+Bevacizumab Regimen or biosimilar -> Stable disease on systemic therapy (3%) -> Watchful Waiting
+
+
+## Extend Time Period between MRIs ##
+Extend Time Period between MRIs -> Consider discharge if stable long-term (>10 years) (100%) -> Radiographic diagnosis by brain MRI (Dural-based mass, Dural tail or CSF cleft)
+
+
+## Initial Assessment ##
+Initial Assessment -> Symptomatic OR Large Tumor (>3cm) OR Growth >1.5mm/month (78%) -> Is tumor accessible?
+Initial Assessment -> Inoperable location, progressive symptoms  -> Radiotherapy
+Initial Assessment -> Large tumor (>3cm) with mass effect (6%) -> Resection
+Initial Assessment -> Incidental finding, asymptomatic (16%) -> Watchful Waiting
+
+
+## Is tumor accessible? ##
+Is tumor accessible? -> No, challenging location (4%) -> Clinical Trial
+Is tumor accessible? -> Yes, accessible location (95%) -> Resection
+Is tumor accessible? -> No, Recurrent Disease  -> Systemic Therapy
+
+
+## Radiographic diagnosis by brain MRI (Dural-based mass, Dural tail or CSF cleft) ##
+Radiographic diagnosis by brain MRI (Dural-based mass, Dural tail or CSF cleft) -> (100%) -> Initial Assessment
+
+
+## Radiotherapy ##
+Radiotherapy -> Post-treatment monitoring (98%) -> Repeated Imaging every 3-6 months
+Radiotherapy -> Complete response, no residual (1%) -> Watchful Waiting
+
+
+## Recurrent or Progressive Disease ##
+Recurrent or Progressive Disease -> Inoperable recurrence (24%) -> Radiotherapy
+Recurrent or Progressive Disease -> Operable recurrence (75%) -> Resection
+
+
+## Repeated Imaging every 3-6 months ##
+Repeated Imaging every 3-6 months -> Multiple recurrences, exhausted local options  -> Bevacizumab Regimen or biosimilar
+Repeated Imaging every 3-6 months -> Stable for >5 years (5%) -> Extend Time Period between MRIs
+Repeated Imaging every 3-6 months -> New concerning features  -> Radiographic diagnosis by brain MRI (Dural-based mass, Dural tail or CSF cleft)
+Repeated Imaging every 3-6 months -> Growth >1.5mm/month or new symptoms (87%) -> Recurrent or Progressive Disease
+Repeated Imaging every 3-6 months -> Significant growth (>5mm/year) in accessible location (1%) -> Resection
+Repeated Imaging every 3-6 months -> Stable disease, no new symptoms (5%) -> Watchful Waiting
+
+
+## Resection ##
+Resection -> Pathology confirms WHO Grade 1 (38%) -> WHO Grade 1
+Resection -> Pathology confirms WHO Grade 2 (43%) -> WHO Grade 2
+Resection -> Pathology confirms WHO Grade 3 (17%) -> WHO Grade 3
+
+
+## Systemic Therapy ##
+Systemic Therapy -> Progressive disease, not amenable to local therapies (100%) -> Bevacizumab Regimen or biosimilar
+Systemic Therapy -> Failure of standard systemic options  -> Clinical Trial
+
+
+## WHO Grade 1 ##
+WHO Grade 1 -> Incomplete resection (26%) -> Radiotherapy
+WHO Grade 1 -> Subtotal resection, monitor residual (6%) -> Repeated Imaging every 3-6 months
+WHO Grade 1 -> Complete resection, no residual (66%) -> Watchful Waiting
+
+
+## WHO Grade 2 ##
+WHO Grade 2 -> Standard treatment (100%) -> Radiotherapy
+WHO Grade 2 -> Recurrence after radiotherapy  -> Systemic Therapy
+WHO Grade 2 -> Watchful Waiting
+
+
+## WHO Grade 3 ##
+WHO Grade 3 -> Standard treatment (100%) -> Radiotherapy
+
+
+## Watchful Waiting ##
+Watchful Waiting -> Rapid growth (>3mm/month) in inoperable location  -> Bevacizumab Regimen or biosimilar
+Watchful Waiting -> Progressive disease, not suitable for standard options  -> Clinical Trial
+Watchful Waiting -> Stable for 1 year, no symptoms (9%) -> Extend Time Period between MRIs
+Watchful Waiting -> Follow-up MRI at 3-6 months (90%) -> Repeated Imaging every 3-6 months
+
+
+Clinical Trial -> None
+Low Patient Survival "] -> None

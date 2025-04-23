@@ -1,0 +1,90 @@
+## Disease Progression ##
+Disease Progression -> Inoperable Recurrence (30%) -> Radiotherapy
+Disease Progression -> Operable Recurrence (70%) -> Surgery
+
+
+## Extended Follow-Up ##
+Extended Follow-Up -> New Symptoms or Lesion (100%) -> Radiographic diagnosis by brain MRI (Dural-based mass, Dural tail or CSF cleft)
+
+
+## Follow-up ##
+Follow-up -> Growth >5mm/year or New Symptoms (84%) -> Disease Progression
+Follow-up -> Stable for >5 years (7%) -> Extended Follow-Up
+Follow-up -> Stable for >2 years (8%) -> Watchful Waiting
+
+
+## Genetic Testing ##
+Genetic Testing -> NF2 or Other Syndrome (100%) -> Specialized MDT Discussion
+Genetic Testing -> No Syndrome Detected  -> Watchful Waiting
+
+
+## Incidental Finding Management ##
+Incidental Finding Management -> Repeat Imaging in 1 Year (100%) -> Repeat Imaging
+
+
+## Neuro-Oncology MDT ##
+Neuro-Oncology MDT -> Suspected Metastasis  -> Metastasis Workup
+Neuro-Oncology MDT -> Confirmed Meningioma  -> Treatment Decision
+
+
+## Radiographic diagnosis by brain MRI (Dural-based mass, Dural tail or CSF cleft) ##
+Radiographic diagnosis by brain MRI (Dural-based mass, Dural tail or CSF cleft) -> Small Calcified or Dural-Based Lesion (1%) -> Incidental Finding Management
+Radiographic diagnosis by brain MRI (Dural-based mass, Dural tail or CSF cleft) -> History of Malignancy  -> Neuro-Oncology MDT
+Radiographic diagnosis by brain MRI (Dural-based mass, Dural tail or CSF cleft) -> Significant Perilesional Edema (64%) -> Steroid Therapy
+Radiographic diagnosis by brain MRI (Dural-based mass, Dural tail or CSF cleft) -> (33%) -> Treatment Decision
+Radiographic diagnosis by brain MRI (Dural-based mass, Dural tail or CSF cleft) -> Suspected Spinal Involvement  -> Whole Neuroaxis MRI
+
+
+## Radiotherapy ##
+Radiotherapy -> Post-treatment: 3-6 months (78%) -> Follow-up
+Radiotherapy -> Large (>3cm) or Near Critical Structures (13%) -> Fractionated Radiotherapy
+Radiotherapy -> Small (<3cm), Away from Optic Apparatus (7%) -> Stereotactic Radiosurgery
+
+
+## Repeat Imaging ##
+Repeat Imaging -> Growth or New Symptoms (100%) -> Treatment Decision
+Repeat Imaging -> Stable  -> Watchful Waiting
+
+
+## Steroid Therapy ##
+Steroid Therapy -> (100%) -> Treatment Decision
+
+
+## Surgery ##
+Surgery -> (100%) -> WHO Grade
+
+
+## Systemic Therapy ##
+Systemic Therapy -> Recurrent, Progressive Disease (100%) -> Bevacizumab Regimen
+
+
+## Treatment Decision ##
+Treatment Decision -> Multiple Meningiomas or Age <30  -> Genetic Testing
+Treatment Decision -> Complex Cases, Multiple Lesions  -> Multidisciplinary Approach
+Treatment Decision -> Poor Performance Status, Multiple Recurrences (3%) -> Palliative Care
+Treatment Decision -> Inoperable, Symptomatic (14%) -> Radiotherapy
+Treatment Decision -> Symptomatic, Accessible (54%) -> Surgery
+Treatment Decision -> Asymptomatic, Small (<1cm) (27%) -> Watchful Waiting
+
+
+## WHO Grade ##
+WHO Grade -> Grade 2/3, Incomplete Resection (65%) -> Radiotherapy
+WHO Grade -> Grade 3, Extensive Disease (8%) -> Systemic Therapy
+WHO Grade -> Grade 1, Complete Resection (26%) -> Watchful Waiting
+
+
+## Watchful Waiting ##
+Watchful Waiting -> Initial: 3-6 months (100%) -> Follow-up
+
+
+## Whole Neuroaxis MRI ##
+Whole Neuroaxis MRI -> Neurological Deficit or Growth  -> Treatment Decision
+
+
+Bevacizumab Regimen -> None
+Fractionated Radiotherapy -> None
+Metastasis Workup -> None
+Multidisciplinary Approach -> None
+Palliative Care -> None
+Specialized MDT Discussion -> None
+Stereotactic Radiosurgery -> None

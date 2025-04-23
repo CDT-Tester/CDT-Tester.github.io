@@ -25,7 +25,7 @@ function parseDecisionGraph(raw) {
         if (!graph[fromNode]) {
           graph[fromNode] = { label: fromNode, options: [] };
         }
-        graph[fromNode].options.push({ condition, next: nextNode });
+        graph[fromNode].options.push({ condition: "", next: "END OF GRAPH" });
       }
     }
   }
@@ -36,8 +36,8 @@ function parseDecisionGraph(raw) {
   return graph;
 }
 
-const DecisionNavigator = ({ treePath = './txt-cdts/Text_Complex_2_Tree.txt'}) => {
-  const [path, setPath] = useState(["Suspected Meningioma"]);
+const DecisionNavigator = ({ treePath = './txt-cdts/Text_Guideline_2_Tree.txt'}) => {
+  const [path, setPath] = useState(["Radiographic diagnosis by brain MRI (Dural-based mass, Dural tail or CSF cleft)"]);
   const[decisionData, setDecisionData] = useState({})
 
   useEffect(() => {
@@ -46,11 +46,6 @@ const DecisionNavigator = ({ treePath = './txt-cdts/Text_Complex_2_Tree.txt'}) =
         const response = await fetch(treePath);
         const treeText = await response.text();
         setDecisionData(parseDecisionGraph(treeText));
-        if (treePath === './txt-cdts/Text_Complex_2_Tree.txt'){
-          setPath(["Meningioma Detected"]);
-        } else {
-          setPath(["Suspected Meningioma"]);
-        }
 
       } catch (err) {
         console.error('Error loading CSV:', err);
