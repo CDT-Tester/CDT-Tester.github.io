@@ -6,55 +6,47 @@ import ResponseForm from "./ResponseForm";
 const SequentialClinicalApp = () => {
   // State to track current step (instead of active tab)
   const [currentStep, setCurrentStep] = useState(0);
-  
-  // State to store data between steps if needed
-  const [appData, setAppData] = useState({
-    referencePatientData: null,
-    testPatientData: null,
-    rarePatientData: null,
-    userResponses: {}
-  });
 
   // Define the sequence of steps
   const steps = [
     {
-      id: 2,
+      id: 0,
       title: "Reference Clinical Notes",
       task: "Read these clinical notes to help round out your understanding of meningioma management",
       component: <PatientNotesPanel csvPath="./syn-clinical-notes/reference-patients.csv" />
     },
     {
-        id: 3,
+        id: 1,
         title: "Response Form",
         task: "Please Respond to the Form",
         component: <ResponseForm formPath="https://docs.google.com/forms/d/e/1FAIpQLSfglmcTZX3bYgmuMOseBXOppflGqAjt5YfuELwtew82rcMjWA/viewform?usp=header"/>
     },
     {
-        id: 4,
+        id: 2,
         title: "Clinical Decision Trees",
         task: "Study these decision trees to help round out your understanding of meningioma management.\n Using the buttons in the bottom right and left change the format and complexity of the tree.  You can choose between a graphical, text-based, or interactive tree.",
+        component: <SVGViewer />
+    },
+    {
+        id: 3,
+        title: "Response Form",
+        task: "Please Respond to the Form",
+        component: <ResponseForm formPath="https://docs.google.com/forms/d/e/1FAIpQLSdMXZLU5-2UsxmkQ89VBiQO4XEOicTjQhFqTrpAEmRlO5_N_A/viewform?usp=sharing"/>
+    },
+    {
+        id: 4,
+        title: "Clinical Decision Trees",
+        task: "Take another DTs and the level of detail. Try to notice the trade-offs.",
         component: <SVGViewer />
     },
     {
         id: 5,
         title: "Response Form",
         task: "Please Respond to the Form",
-        component: <ResponseForm formPath="https://docs.google.com/forms/d/e/1FAIpQLSdMXZLU5-2UsxmkQ89VBiQO4XEOicTjQhFqTrpAEmRlO5_N_A/viewform?usp=sharing"/>
-    },
-    {
-        id: 6,
-        title: "Clinical Decision Trees",
-        task: "Take another DTs and the level of detail. Try to notice the trade-offs.",
-        component: <SVGViewer />
-    },
-    {
-        id: 7,
-        title: "Response Form",
-        task: "Please Respond to the Form",
         component: <ResponseForm formPath="https://docs.google.com/forms/d/e/1FAIpQLSfZjm762Cn3ir34LgZaH5iNQxqrON0lk35R--szGlUXS70WpQ/viewform?usp=dialog"/>
     },
     {
-        id: 8,
+        id: 6,
         title: "Treatment Decisions",
         task: "Use the partial set of notes and clinical decision trees as a reference when reviewing these cases. Use any settings on the tree that you find most useful.",
         component: (

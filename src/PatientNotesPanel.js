@@ -105,7 +105,7 @@ const PatientNotesPanel = ({
     };
   
     loadPatients();
-  }, [csvPath, rarePath]);
+  }, [csvPath, rarePath, isTesting]);
 
   const selectedPatient = patients[selectedPatientIndex];
 

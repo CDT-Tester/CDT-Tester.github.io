@@ -54,7 +54,7 @@ const SVGViewer = () => {
         loadText();
       }
 
-  }, [selectedSVG, showText]);
+  }, [svgPaths, selectedSVG, showText, textNumber]);
 
   // Handle wheel zoom
   const handleWheel = (e) => {
