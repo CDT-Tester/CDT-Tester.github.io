@@ -11,7 +11,7 @@ const StartPage = () => {
     // Simulate loading resources (remove this in production)
     setTimeout(() => {
       setIsLoading(false);
-      navigate("/study"); // Navigate to your sequence component
+      navigate("/survey"); // Navigate to your sequence component
     }, 1500);
   };
 
@@ -33,7 +33,7 @@ const StartPage = () => {
                 Welcome to the Clinical Decision Tree Survey
               </h2>
               <p className="text-gray-600">
-                A step-by-step study to help assess the pros and cons of LLM-driven Clinical Decision Trees using fictional and synthetic clinical notes
+                A step-by-step survey to help assess the pros and cons of LLM-driven Clinical Decision Trees using fictional and synthetic clinical notes
               </p>
             </div>
 

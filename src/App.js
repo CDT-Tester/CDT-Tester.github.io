@@ -9,7 +9,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<StartPage />} />
-        <Route path="/study" element={<SequentialClinicalApp />} />
+        <Route path="/survey" element={<SequentialClinicalApp />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
