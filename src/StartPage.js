@@ -11,7 +11,7 @@ const StartPage = () => {
     // Simulate loading resources (remove this in production)
     setTimeout(() => {
       setIsLoading(false);
-      navigate("/survey"); // Navigate to your sequence component
+      navigate("/steps"); // Navigate to your sequence component
     }, 1500);
   };
 
@@ -20,7 +20,7 @@ const StartPage = () => {
       {/* Header */}
       <header className="bg-white shadow-sm p-4">
         <div className="container mx-auto">
-          <h1 className="text-2xl font-bold text-blue-800">Clinical Decision Trees Survey</h1>
+          <h1 className="text-2xl font-bold text-blue-800">Clinical Decision Trees UX Feedback</h1>
         </div>
       </header>
 
@@ -30,10 +30,10 @@ const StartPage = () => {
           <div className="p-8">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-2">
-                Welcome to the Clinical Decision Tree Survey
+                Welcome to the Clinical Decision Tree UX Feedback
               </h2>
               <p className="text-gray-600">
-                A step-by-step survey to help assess the pros and cons of LLM-driven Clinical Decision Trees using fictional and synthetic clinical notes
+                A set of simple tasks to help assess the pros and cons of LLM-driven Clinical Decision Trees using fictional and synthetic clinical notes
               </p>
             </div>
 
@@ -105,7 +105,7 @@ const StartPage = () => {
                     Loading...
                   </span>
                 ) : (
-                  "Begin Survey"
+                  "Begin"
                 )}
               </button>
             </div>
